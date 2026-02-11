@@ -1,7 +1,0 @@
-term
-https://creativecommons.org/licenses/unspecified
-https://w3id.org/pmd/imt.owl
-http://purl.org/dc/terms/license
-http://purl.org/dc/terms/description
-https://w3id.org/pmd/IMT_0000000
-http://purl.org/dc/terms/title

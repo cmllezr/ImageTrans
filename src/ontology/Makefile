@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d675d868f9f494353d8f46f8b51d28950673d8e88525387d6ef2b37e15ad80fd
+CONFIG_HASH=                9825a3d311efd5997c8ccd9feed36998e7d5ad765a6c701ad8bb18c96ad373aa
 
 
 # ----------------------------------------
@@ -417,6 +417,12 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: pmdco (custom)
+$(IMPORTDIR)/pmdco_import.owl: $(MIRRORDIR)/pmdco.owl
+	@echo "ERROR: You have configured pmdco as a custom module;"
+	@echo "       This rule needs to be overwritten in imt.Makefile!"
+	@false
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -502,7 +508,7 @@ ifeq ($(MIR),true)
 .PHONY: mirror-pmdco
 .PRECIOUS: $(MIRRORDIR)/pmdco.owl
 mirror-pmdco: | $(TMPDIR)
-	$(ROBOT) convert -I https://materialdigital.github.io/core-ontology/ontology.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/materialdigital/core-ontology/refs/heads/main/src/ontology/pmdco.ttl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
