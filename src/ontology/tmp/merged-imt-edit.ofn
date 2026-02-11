@@ -9,13 +9,6 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://w3id.org/pmd/imt.owl>
-Import(<https://w3id.org/pmd/imt/components/imports-edit.owl>)
-Import(<https://w3id.org/pmd/imt/components/imt-axioms-shared.owl>)
-Import(<https://w3id.org/pmd/imt/components/imt-entities.owl>)
-Import(<https://w3id.org/pmd/imt/components/imt-microscopy.owl>)
-Import(<https://w3id.org/pmd/imt/components/imt-shared.owl>)
-Import(<https://w3id.org/pmd/imt/components/imt-transformation.owl>)
-Import(<https://w3id.org/pmd/imt/imports/pmdco_import.owl>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "ImageTrans: Application-level ontology for image transformation")
