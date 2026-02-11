@@ -1350,6 +1350,7 @@ RO&apos;s &apos;quality of&apos; is functional i.e., a-&gt;b, a-&gt;c =&gt; b=c.
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
         <owl:inverseOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000010"/>
         <rdfs:domain rdf:resource="https://w3id.org/pmd/imt/IMT_0000002"/>
+        <rdfs:range rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
         <rdfs:label xml:lang="en">has target member</rdfs:label>
         <skos:definition xml:lang="en">has target member is a relation between a matching pair an image, which is a member is this pair, which content is going to be matched to a coordinate system of another image.</skos:definition>
     </owl:ObjectProperty>
@@ -1362,6 +1363,7 @@ RO&apos;s &apos;quality of&apos; is functional i.e., a-&gt;b, a-&gt;c =&gt; b=c.
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
         <owl:inverseOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000009"/>
         <rdfs:domain rdf:resource="https://w3id.org/pmd/imt/IMT_0000002"/>
+        <rdfs:range rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
         <rdfs:label xml:lang="en">has source member</rdfs:label>
         <skos:definition xml:lang="en">has source member is a relation between a matching pair an image, which is a member in this pair, which coordinate system is a going to used as a source coordinate system for a warped image.</skos:definition>
     </owl:ObjectProperty>
@@ -1384,6 +1386,24 @@ RO&apos;s &apos;quality of&apos; is functional i.e., a-&gt;b, a-&gt;c =&gt; b=c.
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
         <rdfs:label xml:lang="en">target member of</rdfs:label>
         <skos:definition xml:lang="en">inverse of has target member</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000012 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000012">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000101"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000101"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
+            <rdf:Description rdf:about="https://w3id.org/pmd/imt/IMT_0000008"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">image derived from</rdfs:label>
+        <skos:definition xml:lang="en">Warped image is an image which is a specified output of an image transofrmation process. It is derived from an image, which is a source member of a matching pair, that is a specified output of a image transformation process.
+
+image derived from is a relation between an warped image and an image, which is a source member if the matching pair that is a specified input to the image transofrmation process.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -2137,7 +2157,7 @@ Previous. An information content entity is a non-realizable information entity t
     <!-- http://purl.obolibrary.org/obo/IAO_0000308 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000308">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
         <obo:IAO_0000112 xml:lang="en">Any picture, diagram or table</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">An information content entity consisting of a two dimensional arrangement of information content entities such that the arrangement itself is about something.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">figure</rdfs:label>
@@ -4024,10 +4044,29 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
     <!-- https://w3id.org/pmd/imt/IMT_0000002 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000007"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/imt/IMT_0000008"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>TODO: expand the defintion</rdfs:comment>
         <rdfs:label xml:lang="en">matching pair</rdfs:label>
-        <skos:definition xml:lang="en">Matching pair is a data set of at least 2 data items.</skos:definition>
+        <skos:definition xml:lang="en">Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source.</skos:definition>
     </owl:Class>
     
 
@@ -4058,6 +4097,33 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:label xml:lang="en">image transformation ground truth</rdfs:label>
         <skos:definition xml:lang="en">Image transformation ground truth is a data set which is a specified input to the homography process. It consists of pairs of 2D coordinates, where one element of the pair refers to a coordinate in a reference frame of a source a image, and the other element - to a coordinate in a reference frame of a target image.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000011">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000101"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000101"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">warped image</rdfs:label>
+        <skos:definition xml:lang="en">Warped image is an image which is a specified output of an image transofrmation process. It is derived from an image, which is a source member of a matching pair, that is a specified output of a image transformation process.</skos:definition>
     </owl:Class>
     
 

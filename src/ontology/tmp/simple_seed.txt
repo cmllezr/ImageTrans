@@ -97,6 +97,8 @@ https://w3id.org/pmd/imt/IMT_0000007
 https://w3id.org/pmd/imt/IMT_0000008
 https://w3id.org/pmd/imt/IMT_0000009
 https://w3id.org/pmd/imt/IMT_0000010
+https://w3id.org/pmd/imt/IMT_0000011
+https://w3id.org/pmd/imt/IMT_0000012
 term
 http://www.geneontology.org/formats/oboInOwl#SubsetProperty
 http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty
