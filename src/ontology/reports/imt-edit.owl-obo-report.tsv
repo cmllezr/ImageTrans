@@ -1,1 +1,12 @@
 Level	Rule Name	Subject	Property	Value
+WARN	missing_definition	coordinate system	definition	
+WARN	missing_definition	has coordinate system	definition	
+WARN	missing_definition	matching pair	definition	
+WARN	missing_definition	image transformation	definition	
+WARN	missing_definition	homography	definition	
+WARN	missing_definition	image transformation ground truth	definition	
+WARN	missing_definition	coordinate system of	definition	
+WARN	missing_definition	has target member	definition	
+WARN	missing_definition	has source member	definition	
+WARN	missing_definition	source member of	definition	
+WARN	missing_definition	target member of	definition	

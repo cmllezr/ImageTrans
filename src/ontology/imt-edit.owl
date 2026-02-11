@@ -15,6 +15,7 @@ Import(<https://w3id.org/pmd/imt/components/imt-entities.owl>)
 Import(<https://w3id.org/pmd/imt/components/imt-microscopy.owl>)
 Import(<https://w3id.org/pmd/imt/components/imt-shared.owl>)
 Import(<https://w3id.org/pmd/imt/components/imt-transformation.owl>)
+Import(<https://w3id.org/pmd/imt/imports/iao_import.owl>)
 Import(<https://w3id.org/pmd/imt/imports/pmdco_import.owl>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
@@ -32,7 +33,7 @@ Declaration(AnnotationProperty(dcterms:title))
 
 AnnotationAssertion(rdfs:label dcterms:description "description")
 
-# Annotation Property: dcterms:license (dcterms:license)
+# Annotation Property: dcterms:license (license)
 
 AnnotationAssertion(rdfs:label dcterms:license "license")
 
