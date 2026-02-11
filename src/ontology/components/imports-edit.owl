@@ -10,6 +10,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/imt/components/imports-edit.owl">
         <owl:imports rdf:resource="https://w3id.org/pmd/imt/imports/pmdco_import.owl"/>
+        <owl:imports rdf:resource="https://w3id.org/pmd/imt/imports/iao_import.owl"/>
     </owl:Ontology>
 
     <!-- This is a placeholder, it will be regenerated when makefile is first executed -->
