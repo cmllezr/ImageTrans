@@ -230,14 +230,6 @@ obo:BFO_0000055 rdf:type owl:ObjectProperty ;
                 skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
 
 
-###  http://purl.obolibrary.org/obo/BFO_0000066
-obo:BFO_0000066 rdf:type owl:ObjectProperty ;
-                owl:inverseOf obo:BFO_0000183 ;
-                rdfs:label "occurs in"@en ;
-                skos:definition "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"@en ;
-                skos:example "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"@en .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000108
 obo:BFO_0000108 rdf:type owl:ObjectProperty ;
                 rdfs:label "exists at"@en ;
@@ -281,13 +273,6 @@ obo:BFO_0000138 rdf:type owl:ObjectProperty ;
                 rdfs:label "proper occurrent part of"@en ;
                 skos:definition "b proper occurrent part of c =Def b occurrent part of c & b and c are not identical"@en ;
                 skos:example "As for occurrent part of."@en .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000183
-obo:BFO_0000183 rdf:type owl:ObjectProperty ;
-                rdfs:label "environs"@en ;
-                skos:definition "b environs c =Def c occurs in b"@en ;
-                skos:example "Mouth environs process of mastication; city environs traffic"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000039
@@ -708,22 +693,11 @@ obo:RO_0002234 rdf:type owl:ObjectProperty ;
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002350
-obo:RO_0002350 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf obo:BFO_0000050 ;
-               owl:inverseOf obo:RO_0002351 ;
-               obo:IAO_0000112 "An organism that is a member of a population of organisms" ;
-               obo:IAO_0000115 "is member of is a mereological relation between a item and a collection." ;
-               obo:IAO_0000119 "SIO" ;
-               rdfs:label "member of"@en .
+obo:RO_0002350 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002351
-obo:RO_0002351 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf obo:BFO_0000051 ;
-               rdf:type owl:IrreflexiveProperty ;
-               obo:IAO_0000115 "has member is a mereological relation between a collection and an item." ;
-               obo:IAO_0000119 "SIO" ;
-               rdfs:label "has member"@en .
+obo:RO_0002351 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002352
@@ -800,19 +774,6 @@ co:PMD_0000077 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf co:PMD_0000004 ;
                rdfs:label "specified by value"@en ;
                skos:definition "A relation between an entity and a value specification which is about this entity."@en .
-
-
-###  https://w3id.org/pmd/co/PMD_0001028
-co:PMD_0001028 rdf:type owl:ObjectProperty ;
-               owl:inverseOf co:PMD_0001029 ;
-               rdfs:label "in response to"@en ;
-               skos:definition "inverse of responds with"@en .
-
-
-###  https://w3id.org/pmd/co/PMD_0001029
-co:PMD_0001029 rdf:type owl:ObjectProperty ;
-               rdfs:label "responds with"@en ;
-               skos:definition "The realizable entity must be \"stimulated\" by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020127

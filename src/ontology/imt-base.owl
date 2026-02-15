@@ -167,12 +167,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000108 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000108"/>
@@ -200,12 +194,6 @@
     <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0001927 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001927"/>
     
 
 
@@ -301,26 +289,6 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/pmd/co/PMD_0000004"/>
         <rdfs:label xml:lang="en">specified by value</rdfs:label>
         <skos:definition xml:lang="en">A relation between an entity and a value specification which is about this entity.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0001028 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001028">
-        <owl:inverseOf rdf:resource="https://w3id.org/pmd/co/PMD_0001029"/>
-        <rdfs:label xml:lang="en">in response to</rdfs:label>
-        <skos:definition xml:lang="en">inverse of responds with</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0001029 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001029">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <rdfs:label xml:lang="en">responds with</rdfs:label>
-        <skos:definition xml:lang="en">The realizable entity must be &quot;stimulated&quot; by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -567,12 +535,6 @@ image derived from is a relation between an warped image and an image, which is 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000024 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024"/>
@@ -606,14 +568,6 @@ image derived from is a relation between an warped image and an image, which is 
     <!-- http://purl.obolibrary.org/obo/COB_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000035"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/COB_0000082 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000082">
-        <owl:disjointWith rdf:resource="https://w3id.org/pmd/co/PMD_0025009"/>
-    </owl:Class>
     
 
 
@@ -656,12 +610,6 @@ image derived from is a relation between an warped image and an image, which is 
     <!-- http://purl.obolibrary.org/obo/OBI_0001930 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001930"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0001931 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001931"/>
     
 
 
@@ -807,12 +755,7 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
 
     <!-- https://w3id.org/pmd/co/PMD_0000501 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000501">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <rdfs:label xml:lang="en">1D</rdfs:label>
-        <skos:definition xml:lang="en">1-D is an information content entity representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis.</skos:definition>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000501"/>
     
 
 
@@ -961,23 +904,26 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000594 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000594">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000933"/>
+        <rdfs:label xml:lang="de">Deep Learning</rdfs:label>
+        <rdfs:label xml:lang="en">deep learning</rdfs:label>
+        <skos:definition xml:lang="en">A simulation process that employs artificial neural networks with many layers to model complex patterns in data.</skos:definition>
+        <skos:definition xml:lang="de">Ein Simulationsprozess, der künstliche neuronale Netze mit vielen Schichten verwendet, um komplexe Muster in Daten zu modellieren.</skos:definition>
+        <skos:example xml:lang="en">Using deep learning to predict the formation of defects in crystalline materials.</skos:example>
+        <co:PMD_0050117>DL</co:PMD_0050117>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000595 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000595">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
         <rdfs:label xml:lang="en">defect density</rdfs:label>
         <skos:definition xml:lang="en">The defect density is a morphological quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties.</skos:definition>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000596 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000596">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <rdfs:label xml:lang="en">deformation</rdfs:label>
-        <skos:definition xml:lang="en">The deformation is a process describing a change in the shape, size, or structure of a material often under the influence of stress or force.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -1063,6 +1009,19 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000660 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000660">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000594"/>
+        <rdfs:label xml:lang="de">Generatives Deep Learning</rdfs:label>
+        <rdfs:label xml:lang="en">generative deep learning</rdfs:label>
+        <skos:definition xml:lang="en">A deep learning process that involves creating models capable of generating new data instances that resemble the training data.</skos:definition>
+        <skos:definition xml:lang="de">Ein Deep Learning-Prozess, der Modelle erstellt, die in der Lage sind, neue Dateninstanzen zu erzeugen, die den Trainingsdaten ähneln.</skos:definition>
+        <skos:example xml:lang="en">Using generative adversarial networks to design new molecular structures with desired properties, such as improved conductivity or strength.</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000663 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000663">
@@ -1086,6 +1045,20 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
         <skos:definition xml:lang="en">An optical microscopy process that uses visible light and lenses to magnify and visualize specimens, enabling the study of the microstructure and morphology of materials.</skos:definition>
         <skos:definition xml:lang="de">Ein optisches Mikroskopieverfahren, das sichtbares Licht und Linsen verwendet, um Proben zu vergrößern und zu visualisieren, wodurch die Untersuchung der Mikrostruktur und Morphologie von Materialien ermöglicht wird.</skos:definition>
         <skos:example xml:lang="en">An example of a light microscopy process is Confocal Laser Scanning Microscopy, which uses laser light to scan specimens and create high-resolution, three-dimensional images. Another example is Fluorescence Microscopy, which uses fluorescent dyes to label specific components of the specimen, allowing for the visualization of structures that are otherwise difficult to see. A third example is Polarized Light Microscopy, which utilizes polarized light to enhance contrast in samples with birefringent properties, such as crystalline materials.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000821 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000821">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000933"/>
+        <rdfs:label xml:lang="de">Maschinelles Lernen</rdfs:label>
+        <rdfs:label xml:lang="en">machine learning</rdfs:label>
+        <skos:definition xml:lang="en">A simulation process that uses algorithms to enable computers to learn from and make predictions based on data.</skos:definition>
+        <skos:definition xml:lang="de">Ein Simulationsprozess, der Algorithmen verwendet, um Computern das Lernen aus Daten und das Treffen von Vorhersagen zu ermöglichen.</skos:definition>
+        <skos:example xml:lang="en">Predicting the mechanical properties of composite materials based on their composition.</skos:example>
+        <co:PMD_0050117>ML</co:PMD_0050117>
     </owl:Class>
     
 
@@ -1222,6 +1195,19 @@ A manufacturing process is always a transformative process.</skos:definition>
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000865 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000865">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000594"/>
+        <rdfs:label xml:lang="de">Multimodales Deep Learning</rdfs:label>
+        <rdfs:label xml:lang="en">multimodal deep learning</rdfs:label>
+        <skos:definition xml:lang="en">A deep learning process that integrates and processes data from multiple modalities (e.g., text, images, and audio) to improve performance and gain a more comprehensive understanding.</skos:definition>
+        <skos:definition xml:lang="de">Ein Deep Learning-Prozess, der Daten aus mehreren Modalitäten (z.B. Text, Bilder und Audio) integriert und verarbeitet, um die Leistung zu verbessern und ein umfassenderes Verständnis zu erlangen.</skos:definition>
+        <skos:example xml:lang="en">Combining microscopy images and spectroscopic data to predict the properties of new materials more accurately.</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000874 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000874">
@@ -1305,6 +1291,20 @@ A manufacturing process is always a transformative process.</skos:definition>
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000913 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000913">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000594"/>
+        <rdfs:label xml:lang="de">Reinforcement Learning</rdfs:label>
+        <rdfs:label xml:lang="en">reinforcement learning</rdfs:label>
+        <skos:definition xml:lang="en">A deep learning process that involves training models to make sequences of decisions by rewarding desired actions and punishing undesired ones.</skos:definition>
+        <skos:definition xml:lang="de">Ein Deep Learning Prozess, der Modelle darin trainiert, Abfolgen von Entscheidungen zu treffen, indem gewünschte Aktionen belohnt und unerwünschte bestraft werden.</skos:definition>
+        <skos:example xml:lang="en">Using RL to optimize the process parameters in additive manufacturing (3D printing) to achieve the desired material properties and reduce defects.</skos:example>
+        <co:PMD_0050117>RL</co:PMD_0050117>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000922 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000922">
@@ -1354,18 +1354,6 @@ A manufacturing process is always a transformative process.</skos:definition>
         <rdfs:label xml:lang="en">spectroscopy process</rdfs:label>
         <skos:definition xml:lang="en">A structural property analyzing process that measures the interaction of electromagnetic radiation with matter to determine e.g. the composition, structure, and other properties of materials.</skos:definition>
         <skos:definition xml:lang="de">Ein Struktur Eigenschaften Analyseverfahren, das die Wechselwirkung von elektromagnetischer Strahlung mit Materie misst, um die Zusammensetzung, Struktur und physikalischen Eigenschaften von Materialien zu bestimmen.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000946 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000946">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000501"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/pmd/co/PMD_0000992"/>
-        <rdfs:label xml:lang="en">spectrum</rdfs:label>
-        <skos:definition xml:lang="en">A spectrum is a 1-D information content entity that describes the range of wavelengths or frequencies of a physical property, often used in reference to light, sound, or electromagnetic radiation.</skos:definition>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
 
@@ -1440,6 +1428,19 @@ A manufacturing process is always a transformative process.</skos:definition>
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000964 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000964">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000821"/>
+        <rdfs:label xml:lang="de">supervised machine learning</rdfs:label>
+        <rdfs:label xml:lang="en">supervised machine learning</rdfs:label>
+        <skos:definition xml:lang="en">A machine learning process that learns a function mapping from input data to labeled output data.</skos:definition>
+        <skos:definition xml:lang="de">Ein Maschinelles Lernen Prozess, der eine Funktion erlernt, die Eingabedaten auf beschriftete Ausgabedaten abbildet.</skos:definition>
+        <skos:example xml:lang="en">Training a model to predict the tensile strength of a material based on its composition and manufacturing process parameters. This involves using a dataset where the tensile strength is already known (labeled data) to train the model.</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000965 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000965">
@@ -1478,13 +1479,15 @@ A manufacturing process is always a transformative process.</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0000992 -->
+    <!-- https://w3id.org/pmd/co/PMD_0001003 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000992">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000501"/>
-        <rdfs:label xml:lang="en">time series</rdfs:label>
-        <skos:definition xml:lang="en">A time series is a 1-D information content entity defined by a sequence of data points collected or recorded at successive time intervals, used for analyzing temporal properties or trends.</skos:definition>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0001003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000821"/>
+        <rdfs:label xml:lang="de">unsupervised machine learning</rdfs:label>
+        <rdfs:label xml:lang="en">unsupervised machine learning</rdfs:label>
+        <skos:definition xml:lang="en">A machine learning process that identifies patterns and relationships in data without using labeled outcomes.</skos:definition>
+        <skos:definition xml:lang="de">Ein Maschinelles Lernen Prozess, der Muster und Zusammenhänge in Daten identifiziert, ohne beschriftete Ergebnisse zu verwenden.</skos:definition>
+        <skos:example xml:lang="en">Using clustering algorithms to group similar materials based on their properties (e.g., hardness, elasticity, thermal conductivity) without prior knowledge of the categories. For instance, discovering new categories of alloy compositions that exhibit similar thermal properties.</skos:example>
     </owl:Class>
     
 
@@ -1601,36 +1604,6 @@ A manufacturing process is always a transformative process.</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0020004 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020004">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0025001"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0025997"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">These portions of other matters do not have to be portions of specific chemical elements, i.e., atomic composition, but rather portions of other substances, such as nitric acid and water.</rdfs:comment>
-        <rdfs:label xml:lang="en">composition data item</rdfs:label>
-        <skos:altLabel xml:lang="en">composition specification</skos:altLabel>
-        <skos:definition xml:lang="en">Composition data item is an information content entity that is about composition of a portion of matter, and it has members fraction specifications of portions of other matters, which are parts of the whole portion of matter.</skos:definition>
-        <skos:example xml:lang="en">Nitric acid solution has quality  composition, and  the composition data item is about this composition.The composition data item has members fraction specifications of nitric acid, e.g., 4 vol.%, and distilled water. These fraction specifications specify value of pure substances of nitric acid and distilled water, respectively. Furthermore, these fraction specifications specify values of relational qualities (volume) proportion of nitric acid and (volume) proportion of distilled water.</skos:example>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0020005 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020005">
@@ -1708,32 +1681,6 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
         <skos:altLabel xml:lang="en">concentration</skos:altLabel>
         <skos:altLabel xml:lang="en">fraction</skos:altLabel>
         <skos:definition xml:lang="en">A proportion is a relational quality between two entities (the whole and the part) which quantifies the relation between the whole and its part.</skos:definition>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0020102 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020102">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020101"/>
-        <rdfs:label xml:lang="en">mass proportion</rdfs:label>
-        <skos:definition xml:lang="en">Mass proportion is a proportion which quantifies the mass of the part relative to the mass of the whole.</skos:definition>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0020103 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020103">
-        <owl:equivalentClass rdf:resource="https://w3id.org/pmd/co/PMD_0020207"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020101"/>
-        <rdfs:label xml:lang="en">molar proportion</rdfs:label>
-        <skos:altLabel xml:lang="en">Molar Ratio</skos:altLabel>
-        <skos:definition xml:lang="en">Molar proportion is the proportion which quantifies the entities count of the part in relation to the entities count of the whole.</skos:definition>
-        <skos:example xml:lang="en">The molar ratio of hydrogen gas H2 molecules to water H2O molecules is 1/1 in the oxyhydrogen reaction. The molar ratio of oxygen molecules O2 to water molecules is 2/1.
-The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 2022 AD.</skos:example>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -1895,28 +1842,6 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0020205 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020205">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <rdfs:label xml:lang="en">defect role</rdfs:label>
-        <skos:definition xml:lang="en">A defect role is a role of an independent continuant C indicating that C may affect a material entity E&apos;s ability to realize a function. C is continuant part of E.</skos:definition>
-        <skos:example xml:lang="en">A crack in an structural member may affect its ability to carry a load.</skos:example>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0020207 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020207">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020101"/>
-        <rdfs:label xml:lang="en">amount of substance</rdfs:label>
-        <skos:definition xml:lang="en">Amount of substance n is a molar proportion when the whole is an object aggregate N, which has avogadro number objects (of same type) as parts (n = N/N_A).</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0025001 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025001">
@@ -1924,29 +1849,6 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
         <rdfs:label xml:lang="en">composition</rdfs:label>
         <skos:definition xml:lang="en">Composition is a morphological quality describing the types and proportions of compounds (but not chemical elements) present in a portion of matter.</skos:definition>
         <skos:example xml:lang="en">4 vol.% nitric acid solution, Styrene-Butadiene-Styrene (SBS) Block Copolymer with 50 vol.% of both styrene and butadiene</skos:example>
-        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0025002 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025002">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020004"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000551"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">chemical composition data item</rdfs:label>
-        <skos:altLabel xml:lang="en">chemical composition specification</skos:altLabel>
-        <skos:definition xml:lang="en">Chemical composition data item is an information content entity that is about chemical composition of a material and has members fraction specifications of portions of chemical elements, which are parts of the material.</skos:definition>
-        <skos:example xml:lang="en">Steel has quality chemical composition , and the chemical composition data item is about the chemical composition .The chemical composition data item has members fraction specifications of iron and carbon. These fraction specifications specify value of portion of iron and portion of carbon respectively. Furthermore, these fraction specifications specify  values of relational qualities (mass) proportion of iron and (mass) proportion of carbon.</skos:example>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
@@ -1999,74 +1901,6 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0025009 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025009">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000001"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0001028"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Class>
-                                        <owl:unionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
-                                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000005"/>
-                                        </owl:unionOf>
-                                    </owl:Class>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000950"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000001"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0001028"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
-                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000005"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000950"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">material reacting process has always energy minimization as a driving force.</rdfs:comment>
-        <rdfs:label xml:lang="en">material reacting process</rdfs:label>
-        <skos:definition xml:lang="en">Material reacting process is a process which occurs in a portion of matter due to some of its disposition or behavioral material property which has realization in some  stimulating process. Both the material reacting process and stimulating process must be occurent parts of a planned process, if the planned process takes place.</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0025012 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025012">
@@ -2108,49 +1942,6 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
         <rdfs:label xml:lang="en">geometric relational quality</rdfs:label>
         <skos:definition xml:lang="en">Geometric relational quality is a relational quality describing the geometric relation between two or more independent continuants.</skos:definition>
         <skos:example xml:lang="en">Elongation of a specimen after a tensile step, i.e., the specimen before and after the test. Angle between a rolling direction of a rolled material and the longitudinal side of a specimen.</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0025997 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025997">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001927"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020101"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0025999"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">fraction value specification</rdfs:label>
-        <skos:definition xml:lang="en">Fraction value specification is a value specification that contains information about quantitative share of a part relative to a specified whole.</skos:definition>
-        <skos:example xml:lang="en">2.05 wt.% of carbon in steel, 4 vol.% of nitric acid in a solution</skos:example>
     </owl:Class>
     
 
@@ -2788,14 +2579,6 @@ Fix defintion</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020142"/>
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020161"/>
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0050155"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020102"/>
-            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020103"/>
-            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020104"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

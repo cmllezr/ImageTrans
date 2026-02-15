@@ -30,14 +30,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000028>))
-Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000029>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000035>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000038>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
-Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000140>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000141>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000145>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000148>))
@@ -67,7 +65,6 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000068>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000501>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000502>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000503>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000512>))
@@ -76,38 +73,42 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000551>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000553>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000583>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000591>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000594>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000595>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000596>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000597>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000611>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000619>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000624>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000625>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000660>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000663>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000819>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000821>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000834>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000853>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000855>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000856>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000857>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000865>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000874>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000875>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000885>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000890>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000891>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000896>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000913>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000922>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000933>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000942>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000945>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000946>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000950>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000957>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000964>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000965>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000967>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000992>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0001003>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0001014>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0001016>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0001017>))
@@ -115,13 +116,10 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0001018>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0001019>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0001020>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020003>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020004>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020023>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020099>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020101>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020102>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020103>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020104>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020106>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020112>))
@@ -134,19 +132,14 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020143>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020148>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020150>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020161>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020205>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020207>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025001>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0025002>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025003>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025008>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0025009>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025012>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025016>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025017>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025018>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0025997>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050051>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050153>))
@@ -160,13 +153,11 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000108>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000117>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000118>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000132>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000138>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000183>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000039>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
@@ -207,8 +198,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002229>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002230>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002234>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002350>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002352>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002353>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0009006>))
@@ -219,8 +208,6 @@ Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000009>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000069>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000070>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000077>))
-Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0001028>))
-Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0001029>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0020127>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025006>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025998>))
@@ -431,15 +418,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.o
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/BFO_0000015>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/BFO_0000017>)
 
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000066> (occurs in)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000066> "occurs in"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000066> "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000066> "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"@en)
-InverseObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/BFO_0000183>)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000066> ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000035>))
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000066> ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000029> <http://purl.obolibrary.org/obo/BFO_0000040>))
-
 # Object Property: <http://purl.obolibrary.org/obo/BFO_0000108> (exists at)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000108> "exists at"@en)
@@ -475,7 +453,6 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000118> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000132> "occurrent part of"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000132> "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000132> "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000132> <http://purl.obolibrary.org/obo/BFO_0000050>)
 SubObjectPropertyOf(Annotation(rdfs:comment "\"occurrent part of\" is not a BFO2020 temporalized relation. It just restricts the domain and range to \"occurrent\". That's why is should be OK to make it sub property of RO \"part of\"") <http://purl.obolibrary.org/obo/BFO_0000132> <http://purl.obolibrary.org/obo/BFO_0000050>)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000132>)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000132> <http://purl.obolibrary.org/obo/BFO_0000003>)
@@ -490,14 +467,6 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000138> <http://purl.ob
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000138>)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000138> <http://purl.obolibrary.org/obo/BFO_0000003>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000138> <http://purl.obolibrary.org/obo/BFO_0000003>)
-
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000183> (environs)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000183> "environs"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000183> "b environs c =Def c occurs in b"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000183> "Mouth environs process of mastication; city environs traffic"@en)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000183> ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000029> <http://purl.obolibrary.org/obo/BFO_0000040>))
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000183> ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000035>))
 
 # Object Property: <http://purl.obolibrary.org/obo/IAO_0000039> (has measurement unit label)
 
@@ -904,23 +873,6 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002234> "has 
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0000057>)
 InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0002353>)
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0002350> (member of)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0002350> "An organism that is a member of a population of organisms")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002350> "is member of is a mereological relation between a item and a collection.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/RO_0002350> "SIO")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002350> "member of"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002350> <http://purl.obolibrary.org/obo/BFO_0000050>)
-InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002350> <http://purl.obolibrary.org/obo/RO_0002351>)
-
-# Object Property: <http://purl.obolibrary.org/obo/RO_0002351> (has member)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002351> "has member is a mereological relation between a collection and an item.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/RO_0002351> "SIO")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002351> "has member"@en)
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/BFO_0000051>)
-IrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>)
-
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002352> (input of)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002352> "inverse of has input")
@@ -989,18 +941,6 @@ FunctionalObjectProperty(<https://w3id.org/pmd/co/PMD_0000070>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000077> "specified by value"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000077> "A relation between an entity and a value specification which is about this entity."@en)
 SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0000004>)
-
-# Object Property: <https://w3id.org/pmd/co/PMD_0001028> (in response to)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0001028> "in response to"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0001028> "inverse of responds with"@en)
-InverseObjectProperties(<https://w3id.org/pmd/co/PMD_0001028> <https://w3id.org/pmd/co/PMD_0001029>)
-
-# Object Property: <https://w3id.org/pmd/co/PMD_0001029> (responds with)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0001029> "responds with"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0001029> "The realizable entity must be \"stimulated\" by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response."@en)
-ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0001029> <http://purl.obolibrary.org/obo/BFO_0000017>)
 
 # Object Property: <https://w3id.org/pmd/co/PMD_0020127> (refers to)
 
@@ -1224,13 +1164,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://pur
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000028> "A cube-shaped region of space; a sphere-shaped region of space; the region of space occupied by all and only the planets in the solar system at some point in time"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000028> <http://purl.obolibrary.org/obo/BFO_0000006>)
 
-# Class: <http://purl.obolibrary.org/obo/BFO_0000029> (site)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000029> "site"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000029> "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000029> "A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000029> <http://purl.obolibrary.org/obo/BFO_0000141>)
-
 # Class: <http://purl.obolibrary.org/obo/BFO_0000030> (object)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000030> "object"@en)
@@ -1280,13 +1213,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.o
 SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000040> <http://purl.obolibrary.org/obo/BFO_0000004>)
 DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000040> <http://purl.obolibrary.org/obo/BFO_0000141>)
 
-# Class: <http://purl.obolibrary.org/obo/BFO_0000140> (continuant fiat boundary)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000140> "continuant fiat boundary"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000140> "(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions & such that there is no time t when b has a spatial region as continuant part & whose location is determined in relation to some material entity"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <http://purl.obolibrary.org/obo/BFO_0000140> "As for fiat point, fiat line, fiat surface"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000140> <http://purl.obolibrary.org/obo/BFO_0000141>)
-
 # Class: <http://purl.obolibrary.org/obo/BFO_0000141> (immaterial entity)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000141> "immaterial entity"@en)
@@ -1333,7 +1259,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/COB_0000035> ObjectSomeValuesFrom(<ht
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/COB_0000082> "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/COB_0000082> "planned process"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/COB_0000082> <http://purl.obolibrary.org/obo/BFO_0000015>)
-DisjointClasses(<http://purl.obolibrary.org/obo/COB_0000082> <https://w3id.org/pmd/co/PMD_0025009>)
 
 # Class: <http://purl.obolibrary.org/obo/IAO_0000003> (measurement unit label)
 
@@ -1594,13 +1519,6 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> <http://purl.obolibrary.org/obo
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000108> <http://purl.obolibrary.org/obo/BFO_0000008>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000070> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<https://w3id.org/pmd/co/PMD_0000068>))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000501> (1D)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000501> "1D"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000501> "1-D is an information content entity representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000501> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000501> <http://purl.obolibrary.org/obo/IAO_0000027>)
-
 # Class: <https://w3id.org/pmd/co/PMD_0000502> (2D)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000502> "2D"@en)
@@ -1667,19 +1585,22 @@ EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000591> ObjectExactCardinality(1
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000591> <https://w3id.org/pmd/co/PMD_0020131>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000591> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020099>))
 
+# Class: <https://w3id.org/pmd/co/PMD_0000594> (Deep Learning)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000594> "Deep Learning"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000594> "deep learning"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000594> "A simulation process that employs artificial neural networks with many layers to model complex patterns in data."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000594> "Ein Simulationsprozess, der künstliche neuronale Netze mit vielen Schichten verwendet, um komplexe Muster in Daten zu modellieren."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000594> "Using deep learning to predict the formation of defects in crystalline materials."@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0050117> <https://w3id.org/pmd/co/PMD_0000594> "DL")
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000594> <https://w3id.org/pmd/co/PMD_0000933>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000595> (defect density)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000595> "defect density"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000595> "The defect density is a morphological quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000595> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000595> <https://w3id.org/pmd/co/PMD_0020131>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0000596> (deformation)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000596> "deformation"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000596> "The deformation is a process describing a change in the shape, size, or structure of a material often under the influence of stress or force."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000596> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000596> <http://purl.obolibrary.org/obo/BFO_0000015>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000597> (density)
 
@@ -1732,6 +1653,15 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000625> "An example of an electron microscopy process is Scanning Electron Microscopy (SEM), which provides detailed images of the surface topography and composition of a material. Another example is Transmission Electron Microscopy (TEM), which can visualize the internal structure of a sample at atomic resolution."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000625> <https://w3id.org/pmd/co/PMD_0000856>)
 
+# Class: <https://w3id.org/pmd/co/PMD_0000660> (Generatives Deep Learning)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000660> "Generatives Deep Learning"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000660> "generative deep learning"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000660> "A deep learning process that involves creating models capable of generating new data instances that resemble the training data."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000660> "Ein Deep Learning-Prozess, der Modelle erstellt, die in der Lage sind, neue Dateninstanzen zu erzeugen, die den Trainingsdaten ähneln."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000660> "Using generative adversarial networks to design new molecular structures with desired properties, such as improved conductivity or strength."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000660> <https://w3id.org/pmd/co/PMD_0000594>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000663> (kristallit)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000663> "crystallite"@en)
@@ -1750,6 +1680,16 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000819> "Ein optisches Mikroskopieverfahren, das sichtbares Licht und Linsen verwendet, um Proben zu vergrößern und zu visualisieren, wodurch die Untersuchung der Mikrostruktur und Morphologie von Materialien ermöglicht wird."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000819> "An example of a light microscopy process is Confocal Laser Scanning Microscopy, which uses laser light to scan specimens and create high-resolution, three-dimensional images. Another example is Fluorescence Microscopy, which uses fluorescent dyes to label specific components of the specimen, allowing for the visualization of structures that are otherwise difficult to see. A third example is Polarized Light Microscopy, which utilizes polarized light to enhance contrast in samples with birefringent properties, such as crystalline materials."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000819> <https://w3id.org/pmd/co/PMD_0000875>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000821> (machine learning)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000821> "Maschinelles Lernen"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000821> "machine learning"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000821> "A simulation process that uses algorithms to enable computers to learn from and make predictions based on data."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000821> "Ein Simulationsprozess, der Algorithmen verwendet, um Computern das Lernen aus Daten und das Treffen von Vorhersagen zu ermöglichen."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000821> "Predicting the mechanical properties of composite materials based on their composition."@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0050117> <https://w3id.org/pmd/co/PMD_0000821> "ML")
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000821> <https://w3id.org/pmd/co/PMD_0000933>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000833> (manufacturing process)
 
@@ -1807,6 +1747,15 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000857> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000857> <https://w3id.org/pmd/co/PMD_0000001>)
 
+# Class: <https://w3id.org/pmd/co/PMD_0000865> (multimodal deep learning)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000865> "Multimodales Deep Learning"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000865> "multimodal deep learning"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000865> "A deep learning process that integrates and processes data from multiple modalities (e.g., text, images, and audio) to improve performance and gain a more comprehensive understanding."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000865> "Ein Deep Learning-Prozess, der Daten aus mehreren Modalitäten (z.B. Text, Bilder und Audio) integriert und verarbeitet, um die Leistung zu verbessern und ein umfassenderes Verständnis zu erlangen."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000865> "Combining microscopy images and spectroscopic data to predict the properties of new materials more accurately."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000865> <https://w3id.org/pmd/co/PMD_0000594>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000874> (Optisches Mikroskop)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000874> "Optisches Mikroskop"@de)
@@ -1856,6 +1805,16 @@ AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0020131>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0000967>)
 
+# Class: <https://w3id.org/pmd/co/PMD_0000913> (Reinforcement Learning)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000913> "Reinforcement Learning"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000913> "reinforcement learning"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000913> "A deep learning process that involves training models to make sequences of decisions by rewarding desired actions and punishing undesired ones."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000913> "Ein Deep Learning Prozess, der Modelle darin trainiert, Abfolgen von Entscheidungen zu treffen, indem gewünschte Aktionen belohnt und unerwünschte bestraft werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000913> "Using RL to optimize the process parameters in additive manufacturing (3D printing) to achieve the desired material properties and reduce defects."@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0050117> <https://w3id.org/pmd/co/PMD_0000913> "RL")
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000913> <https://w3id.org/pmd/co/PMD_0000594>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000922> (scanning electron microscope)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000922> "Rasterelektronenmikroskop"@de)
@@ -1888,14 +1847,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000945> <https://w3id.org/pmd/co/PMD_0000957>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000945> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009006> <https://w3id.org/pmd/co/PMD_0025001>))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000946> (spectrum)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000946> "spectrum"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000946> "A spectrum is a 1-D information content entity that describes the range of wavelengths or frequencies of a physical property, often used in reference to light, sound, or electromagnetic radiation."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000946> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000946> <https://w3id.org/pmd/co/PMD_0000501>)
-DisjointClasses(<https://w3id.org/pmd/co/PMD_0000946> <https://w3id.org/pmd/co/PMD_0000992>)
-
 # Class: <https://w3id.org/pmd/co/PMD_0000950> (stimulating process)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000950> "stimulating process"@en)
@@ -1905,13 +1856,22 @@ EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000950> ObjectIntersectionOf(<ht
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> <http://purl.obolibrary.org/obo/BFO_0000015>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000016> <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <https://w3id.org/pmd/co/PMD_0000001>))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000957> (Struktur Eigenschaften Analyseverfahren)
+# Class: <https://w3id.org/pmd/co/PMD_0000957> (structural property analyzing process)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "Struktur Eigenschaften Analyseverfahren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "structural property analyzing process"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000957> "An assay that examines the external and internal structure and morphology of materials, including the arrangement of atoms, crystals, grains, and phases, often using techniques like microscopy and diffraction."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000957> "Eine Analyse, die die äußere und innere Struktur und Morphologie von Materialien untersucht, einschließlich der Anordnung von Atomen, Kristallen, Körnern und Phasen, oft unter Verwendung von Techniken wie Mikroskopie und Beugung."@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000957> <http://purl.obolibrary.org/obo/OBI_0000070>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000964> (supervised machine learning)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000964> "supervised machine learning"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000964> "supervised machine learning"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000964> "A machine learning process that learns a function mapping from input data to labeled output data."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000964> "Ein Maschinelles Lernen Prozess, der eine Funktion erlernt, die Eingabedaten auf beschriftete Ausgabedaten abbildet."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0000964> "Training a model to predict the tensile strength of a material based on its composition and manufacturing process parameters. This involves using a dataset where the tensile strength is already known (labeled data) to train the model."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000964> <https://w3id.org/pmd/co/PMD_0000821>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000965> (surface layer (fiat object part))
 
@@ -1931,12 +1891,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000967> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000967> <https://w3id.org/pmd/co/PMD_0020131>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000992> (time series)
+# Class: <https://w3id.org/pmd/co/PMD_0001003> (unsupervised machine learning)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000992> "time series"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000992> "A time series is a 1-D information content entity defined by a sequence of data points collected or recorded at successive time intervals, used for analyzing temporal properties or trends."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000992> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000992> <https://w3id.org/pmd/co/PMD_0000501>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0001003> "unsupervised machine learning"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0001003> "unsupervised machine learning"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0001003> "A machine learning process that identifies patterns and relationships in data without using labeled outcomes."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0001003> "Ein Maschinelles Lernen Prozess, der Muster und Zusammenhänge in Daten identifiziert, ohne beschriftete Ergebnisse zu verwenden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0001003> "Using clustering algorithms to group similar materials based on their properties (e.g., hardness, elasticity, thermal conductivity) without prior knowledge of the categories. For instance, discovering new categories of alloy compositions that exhibit similar thermal properties."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0001003> <https://w3id.org/pmd/co/PMD_0000821>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0001014> (x-ray analyzing process)
 
@@ -2002,17 +1964,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020003> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020003> <http://purl.obolibrary.org/obo/BFO_0000030>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0020004> (composition data item)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0020004> "These portions of other matters do not have to be portions of specific chemical elements, i.e., atomic composition, but rather portions of other substances, such as nitric acid and water."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020004> "composition data item"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/PMD_0020004> "composition specification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020004> "Composition data item is an information content entity that is about composition of a portion of matter, and it has members fraction specifications of portions of other matters, which are parts of the whole portion of matter."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0020004> "Nitric acid solution has quality  composition, and  the composition data item is about this composition.The composition data item has members fraction specifications of nitric acid, e.g., 4 vol.%, and distilled water. These fraction specifications specify value of pure substances of nitric acid and distilled water, respectively. Furthermore, these fraction specifications specify values of relational qualities (volume) proportion of nitric acid and (volume) proportion of distilled water."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020004> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/IAO_0000027> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0025001>)))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002351> <https://w3id.org/pmd/co/PMD_0025997>))
-
 # Class: <https://w3id.org/pmd/co/PMD_0020005> (porosity)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020005> "porosity"@en)
@@ -2047,24 +1998,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020101> "A proportion is a relational quality between two entities (the whole and the part) which quantifies the relation between the whole and its part."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020101> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020101> <http://purl.obolibrary.org/obo/BFO_0000145>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0020102> (mass proportion)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020102> "mass proportion"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020102> "Mass proportion is a proportion which quantifies the mass of the part relative to the mass of the whole."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020102> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020102> <https://w3id.org/pmd/co/PMD_0020101>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0020103> (molar proportion)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020103> "molar proportion"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/PMD_0020103> "Molar Ratio"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020103> "Molar proportion is the proportion which quantifies the entities count of the part in relation to the entities count of the whole."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0020103> "The molar ratio of hydrogen gas H2 molecules to water H2O molecules is 1/1 in the oxyhydrogen reaction. The molar ratio of oxygen molecules O2 to water molecules is 2/1.
-The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 2022 AD."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020103> "true"^^xsd:boolean)
-EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0020207>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0020101>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0020104> (volume proportion)
 
@@ -2155,20 +2088,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020161> "activity (
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020161> "Activity (a_X) is a relational property between a chemical species X and a non-ideal solution. a_X is a measure of the effective concentration of a chemical species X in the non-ideal solution, accounting for interactions between particles. It is defined as the product of the concentration and an activity coefficient, where the activity coefficient corrects for non-ideal behavior."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0020205> (defect role)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020205> "defect role"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020205> "A defect role is a role of an independent continuant C indicating that C may affect a material entity E's ability to realize a function. C is continuant part of E."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0020205> "A crack in an structural member may affect its ability to carry a load."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020205> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020205> <http://purl.obolibrary.org/obo/BFO_0000023>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0020207> (amount of substance)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020207> "amount of substance"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020207> "Amount of substance n is a molar proportion when the whole is an object aggregate N, which has avogadro number objects (of same type) as parts (n = N/N_A)."@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020207> <https://w3id.org/pmd/co/PMD_0020101>)
-
 # Class: <https://w3id.org/pmd/co/PMD_0025001> (composition)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025001> "composition"@en)
@@ -2176,15 +2095,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025001> "4 vol.% nitric acid solution, Styrene-Butadiene-Styrene (SBS) Block Copolymer with 50 vol.% of both styrene and butadiene"@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0025001> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> <https://w3id.org/pmd/co/PMD_0020131>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0025002> (chemical composition data item)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025002> "chemical composition data item"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/PMD_0025002> "chemical composition specification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025002> "Chemical composition data item is an information content entity that is about chemical composition of a material and has members fraction specifications of portions of chemical elements, which are parts of the material."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025002> "Steel has quality chemical composition , and the chemical composition data item is about the chemical composition .The chemical composition data item has members fraction specifications of iron and carbon. These fraction specifications specify value of portion of iron and portion of carbon respectively. Furthermore, these fraction specifications specify  values of relational qualities (mass) proportion of iron and (mass) proportion of carbon."@en)
-AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0025002> "true"^^xsd:boolean)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0000551>)))
 
 # Class: <https://w3id.org/pmd/co/PMD_0025003> (metallic grain structure)
 
@@ -2209,16 +2119,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025008> "transmissi
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025008> "A transmission electron microscope (SEM) is a measuring device that produces high-resolution images of a sample's internal structure by transmitting electrons through the sample."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025008> "Ein Transmissionselektronenmikroskop (TEM) ist ein Messgerät, das hochauflösende Bilder der inneren Struktur einer Probe erzeugt, indem es Elektronen durch die Probe strahlt."@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025008> <https://w3id.org/pmd/co/PMD_0000624>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0025009> (material reacting process)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/co/PMD_0025009> "material reacting process has always energy minimization as a driving force."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025009> "material reacting process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025009> "Material reacting process is a process which occurs in a portion of matter due to some of its disposition or behavioral material property which has realization in some  stimulating process. Both the material reacting process and stimulating process must be occurent parts of a planned process, if the planned process takes place."@en)
-EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025009> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000015> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <https://w3id.org/pmd/co/PMD_0000001>) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001028> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000016> <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://w3id.org/pmd/co/PMD_0000950>)))))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025009> <http://purl.obolibrary.org/obo/BFO_0000015>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025009> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <https://w3id.org/pmd/co/PMD_0000001>))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025009> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001028> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000016> <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://w3id.org/pmd/co/PMD_0000950>))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0025012> (analytical calculation)
 
@@ -2248,15 +2148,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025018> "geometric 
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025018> "Geometric relational quality is a relational quality describing the geometric relation between two or more independent continuants."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025018> "Elongation of a specimen after a tensile step, i.e., the specimen before and after the test. Angle between a rolling direction of a rolled material and the longitudinal side of a specimen."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025018> <http://purl.obolibrary.org/obo/BFO_0000145>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0025997> (fraction value specification)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025997> "fraction value specification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0025997> "Fraction value specification is a value specification that contains information about quantitative share of a part relative to a specified whole."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0025997> "2.05 wt.% of carbon in steel, 4 vol.% of nitric acid in a solution"@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> <http://purl.obolibrary.org/obo/OBI_0001931>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0001927> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000040>))))))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/RO_0002350> <https://w3id.org/pmd/co/PMD_0020004>))
 
 # Class: <https://w3id.org/pmd/co/PMD_0040001> (length)
 
@@ -2506,12 +2397,10 @@ AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/
 
 
 DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/BFO_0000020> <http://purl.obolibrary.org/obo/BFO_0000031>)
-DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000006> <http://purl.obolibrary.org/obo/BFO_0000029> <http://purl.obolibrary.org/obo/BFO_0000140>)
 DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000008> <http://purl.obolibrary.org/obo/BFO_0000011> <http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000035>)
 DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000009> <http://purl.obolibrary.org/obo/BFO_0000018> <http://purl.obolibrary.org/obo/BFO_0000026> <http://purl.obolibrary.org/obo/BFO_0000028>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0000503> <https://w3id.org/pmd/co/PMD_0000512> <https://w3id.org/pmd/co/PMD_0000591> <https://w3id.org/pmd/co/PMD_0000595> <https://w3id.org/pmd/co/PMD_0000597> <https://w3id.org/pmd/co/PMD_0000853> <https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0000942> <https://w3id.org/pmd/co/PMD_0000967> <https://w3id.org/pmd/co/PMD_0020005> <https://w3id.org/pmd/co/PMD_0020112> <https://w3id.org/pmd/co/PMD_0025001> <https://w3id.org/pmd/co/PMD_0025003>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0000619> <https://w3id.org/pmd/co/PMD_0020132> <https://w3id.org/pmd/co/PMD_0020133> <https://w3id.org/pmd/co/PMD_0020142> <https://w3id.org/pmd/co/PMD_0020161> <https://w3id.org/pmd/co/PMD_0050155>)
-DisjointClasses(<https://w3id.org/pmd/co/PMD_0020102> <https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0020104>)
 DifferentIndividuals(<https://w3id.org/pmd/co/PMD_0020006> <https://w3id.org/pmd/co/PMD_0020007> <https://w3id.org/pmd/co/PMD_0020008> <https://w3id.org/pmd/co/PMD_0020009> <https://w3id.org/pmd/co/PMD_0020010> <https://w3id.org/pmd/co/PMD_0020011> <https://w3id.org/pmd/co/PMD_0020012> <https://w3id.org/pmd/co/PMD_0020013> <https://w3id.org/pmd/co/PMD_0020014> <https://w3id.org/pmd/co/PMD_0020015> <https://w3id.org/pmd/co/PMD_0020016> <https://w3id.org/pmd/co/PMD_0020017> <https://w3id.org/pmd/co/PMD_0020018> <https://w3id.org/pmd/co/PMD_0020019>)
 DifferentIndividuals(<https://w3id.org/pmd/co/PMD_0020117> <https://w3id.org/pmd/co/PMD_0020118> <https://w3id.org/pmd/co/PMD_0020119> <https://w3id.org/pmd/co/PMD_0020120> <https://w3id.org/pmd/co/PMD_0020121> <https://w3id.org/pmd/co/PMD_0020122> <https://w3id.org/pmd/co/PMD_0020123> <https://w3id.org/pmd/co/PMD_0020124> <https://w3id.org/pmd/co/PMD_0020125>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0000057>) <http://purl.obolibrary.org/obo/RO_0000057>)
