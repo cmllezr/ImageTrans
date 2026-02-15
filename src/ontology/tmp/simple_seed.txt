@@ -18,6 +18,8 @@ http://purl.obolibrary.org/obo/IAO_0000119
 http://purl.obolibrary.org/obo/IAO_0000136
 http://purl.obolibrary.org/obo/IAO_0000219
 http://purl.obolibrary.org/obo/IAO_0000221
+http://purl.obolibrary.org/obo/IAO_0000232
+http://purl.obolibrary.org/obo/IAO_0000233
 http://purl.obolibrary.org/obo/IAO_0000235
 http://purl.obolibrary.org/obo/IAO_0000417
 http://purl.obolibrary.org/obo/IAO_0000418
@@ -90,7 +92,6 @@ https://w3id.org/pmd/imt/IMT_0000000
 https://w3id.org/pmd/imt/IMT_0000001
 https://w3id.org/pmd/imt/IMT_0000002
 https://w3id.org/pmd/imt/IMT_0000003
-https://w3id.org/pmd/imt/IMT_0000004
 https://w3id.org/pmd/imt/IMT_0000005
 https://w3id.org/pmd/imt/IMT_0000006
 https://w3id.org/pmd/imt/IMT_0000007
@@ -99,6 +100,13 @@ https://w3id.org/pmd/imt/IMT_0000009
 https://w3id.org/pmd/imt/IMT_0000010
 https://w3id.org/pmd/imt/IMT_0000011
 https://w3id.org/pmd/imt/IMT_0000012
+https://w3id.org/pmd/imt/IMT_0000013
+https://w3id.org/pmd/imt/IMT_0000014
+https://w3id.org/pmd/imt/IMT_0000015
+https://w3id.org/pmd/imt/IMT_0000016
+https://w3id.org/pmd/imt/IMT_0000017
+https://w3id.org/pmd/imt/IMT_0000018
+https://w3id.org/pmd/imt/IMT_0000019
 term
 http://www.geneontology.org/formats/oboInOwl#SubsetProperty
 http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty

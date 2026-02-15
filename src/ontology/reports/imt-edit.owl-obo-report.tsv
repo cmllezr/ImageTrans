@@ -3,8 +3,7 @@ WARN	missing_definition	coordinate system	definition
 WARN	missing_definition	has coordinate system	definition	
 WARN	missing_definition	matching pair	definition	
 WARN	missing_definition	image transformation	definition	
-WARN	missing_definition	homography	definition	
-WARN	missing_definition	image transformation ground truth	definition	
+WARN	missing_definition	point correspondence	definition	
 WARN	missing_definition	coordinate system of	definition	
 WARN	missing_definition	has target member	definition	
 WARN	missing_definition	has source member	definition	
@@ -12,3 +11,10 @@ WARN	missing_definition	source member of	definition
 WARN	missing_definition	target member of	definition	
 WARN	missing_definition	warped image	definition	
 WARN	missing_definition	image derived from	definition	
+WARN	missing_definition	estimated point correspondences	definition	
+WARN	missing_definition	transformation model	definition	
+WARN	missing_definition	homography	definition	
+WARN	missing_definition	transformation model parametrization	definition	
+WARN	missing_definition	point correspondences acquisition	definition	
+WARN	missing_definition	point correspondences acquisition using VLM	definition	
+WARN	missing_definition	parameterized transofrmation model	definition	

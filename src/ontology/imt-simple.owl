@@ -14,11 +14,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/imt/imt-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-11/imt-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-15/imt-simple.owl"/>
         <terms:description>None</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title>ImageTrans: Application-level ontology for image transformation</terms:title>
-        <owl:versionInfo>2026-02-11</owl:versionInfo>
+        <owl:versionInfo>2026-02-15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -121,6 +121,18 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
@@ -200,7 +212,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- https://w3id.org/pmd/co/PMD_0000064 -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0000064">
-        <rdfs:comment>An editor note referring to a pattern which shows the usage of this class or property.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An editor note referring to a pattern which shows the usage of this class or property.</rdfs:comment>
         <rdfs:label xml:lang="en">pattern example</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -419,6 +431,7 @@ r is a portion of reality
 there is some c that is a concretization of g 
 every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:label xml:lang="en">denotes</rdfs:label>
     </owl:ObjectProperty>
     
@@ -475,6 +488,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235">
         <obo:IAO_0000115 xml:lang="en">inverse of the relation &apos;denotes&apos;</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/IAO/issues/206"/>
         <rdfs:label xml:lang="en">denoted by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -562,6 +576,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000112>A cell sorting process achieves the objective specification &apos;material separation objective&apos;</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process.</obo:IAO_0000115>
         <obo:IAO_0000119>PPPB branch derived</obo:IAO_0000119>
+        <obo:IAO_0000232>modified according to email thread from 1/23/09 in accordince with DT and PPPB branch</obo:IAO_0000232>
         <rdfs:label>achieves_planned_objective</rdfs:label>
         <co:PMD_0000064>https://github.com/search?q=repo%3Amaterialdigital%2Fcore-ontology+path%3A%2F%5Epatterns%5C%2F%2F+OBI_0000417&amp;type=code</co:PMD_0000064>
     </owl:ObjectProperty>
@@ -598,6 +613,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
+        <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
         <rdfs:label xml:lang="en">characteristic of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -679,6 +695,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000112 xml:lang="en">this catalysis function is a function of this enzyme</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists.</obo:IAO_0000116>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
         <rdfs:label xml:lang="en">function of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -692,6 +709,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000112 xml:lang="en">this red color is a quality of this apple</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A quality inheres in its bearer at all times for which the quality exists.</obo:IAO_0000116>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
         <rdfs:label xml:lang="en">quality of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -705,6 +723,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000112 xml:lang="en">this investigator role is a role of this person</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists.</obo:IAO_0000116>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
         <rdfs:label xml:lang="en">role of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -762,6 +781,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000092">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
         <obo:IAO_0000115>inverse of has disposition</obo:IAO_0000115>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
         <rdfs:label xml:lang="en">disposition of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -830,6 +850,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000115>x simultaneous with y iff ω(x) = ω(y) and ω(α ) = ω(α), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point and &apos;=&apos; indicates the same instance in time.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">t1 simultaneous_with t2 iff:=  t1 before_or_simultaneous_with t2  and not (t1 before t2)</rdfs:comment>
         <rdfs:label xml:lang="en">simultaneous with</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1017,7 +1038,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <owl:inverseOf rdf:resource="https://w3id.org/pmd/co/PMD_0000070"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">has state</rdfs:label>
-        <skos:definition xml:lang="en">relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of</skos:definition>
+        <skos:definition xml:lang="en">relates an anchor continuant to a temporally qualified continuant that represents a specific temporal phase of its existence.</skos:definition>
         <co:PMD_0001032>https://github.com/materialdigital/core-ontology/issues/185</co:PMD_0001032>
     </owl:ObjectProperty>
     
@@ -1028,7 +1049,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000070">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label xml:lang="en">is state of</rdfs:label>
-        <skos:definition>relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of</skos:definition>
+        <skos:definition xml:lang="en">relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1057,7 +1078,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001029">
         <rdfs:label xml:lang="en">responds with</rdfs:label>
-        <skos:definition>The realizable entity must be &quot;stimulated&quot; by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response.</skos:definition>
+        <skos:definition xml:lang="en">The realizable entity must be &quot;stimulated&quot; by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1239,22 +1260,12 @@ image derived from is a relation between an warped image and an image, which is 
     
 
 
-    <!-- https://w3id.org/pmd/imt/IMT_0000004 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000004">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000003"/>
-        <rdfs:label xml:lang="en">homography</rdfs:label>
-        <rdfs:seeAlso>https://medium.com/wanabilini/homography-transformations-in-practice-974c9e2730b2</rdfs:seeAlso>
-        <skos:definition xml:lang="en">A homography is a image transformation which has two images as specified inputs, where a coordinate system of one image has a target role, and another image has a source role, and the specified output of the transformation is another image, which maps the content of a sourse image to the 2D spatial region (coordinate system) of a target image.</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/imt/IMT_0000005 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000005">
-        <rdfs:label xml:lang="en">image transformation ground truth</rdfs:label>
-        <skos:definition xml:lang="en">Image transformation ground truth is a data set which is a specified input to the homography process. It consists of pairs of 2D coordinates, where one element of the pair refers to a coordinate in a reference frame of a source a image, and the other element - to a coordinate in a reference frame of a target image.</skos:definition>
+        <obo:IAO_0000119>https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">point correspondence</rdfs:label>
+        <skos:definition xml:lang="en">Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´.</skos:definition>
     </owl:Class>
     
 
@@ -1270,6 +1281,83 @@ image derived from is a relation between an warped image and an image, which is 
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">warped image</rdfs:label>
         <skos:definition xml:lang="en">Warped image is an image which is a specified output of an image transofrmation process. It is derived from an image, which is a source member of a matching pair, that is a specified output of a image transformation process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000013">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119 xml:lang="en">estimated point correspondences is a point correspondences data set which is a specified output from the estimation process</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">TODO add axiom
+Fix defintion</rdfs:comment>
+        <rdfs:label xml:lang="en">estimated point correspondences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000014 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000014">
+        <rdfs:label xml:lang="de">transformation model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000015 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000015">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000014"/>
+        <rdfs:label xml:lang="de">homography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000016 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000016">
+        <rdfs:label xml:lang="de">transformation model parametrization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000017">
+        <rdfs:label xml:lang="de">point correspondences acquisition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000018 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000018">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000017"/>
+        <rdfs:label xml:lang="de">point correspondences acquisition using VLM</rdfs:label>
+        <skos:altLabel>automated point correspondences acquisition</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000019 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000019">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000014"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">parameterized transofrmation model</rdfs:label>
+        <skos:altLabel xml:lang="en">fitted transformation model</skos:altLabel>
     </owl:Class>
 </rdf:RDF>
 

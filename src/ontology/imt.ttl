@@ -16,11 +16,11 @@
 @base <https://w3id.org/pmd/imt.ttl> .
 
 <https://w3id.org/pmd/imt.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-11/imt.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-15/imt.ttl> ;
                                 dcterms:description "None" ;
                                 dcterms:license <https://creativecommons.org/licenses/unspecified> ;
                                 dcterms:title "ImageTrans: Application-level ontology for image transformation" ;
-                                owl:versionInfo "2026-02-11" .
+                                owl:versionInfo "2026-02-15" .
 
 #################################################################
 #    Annotation properties
@@ -101,6 +101,14 @@ obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
                 rdfs:label "definition source"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000232
+obo:IAO_0000232 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000233
+obo:IAO_0000233 rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/source
 dce:source rdf:type owl:AnnotationProperty .
 
@@ -153,7 +161,7 @@ co:PMD_0000060 rdf:type owl:AnnotationProperty ;
 
 ###  https://w3id.org/pmd/co/PMD_0000064
 co:PMD_0000064 rdf:type owl:AnnotationProperty ;
-               rdfs:comment "An editor note referring to a pattern which shows the usage of this class or property." ;
+               rdfs:comment "An editor note referring to a pattern which shows the usage of this class or property."@en ;
                rdfs:label "pattern example"@en .
 
 
@@ -370,6 +378,7 @@ r is a portion of reality
 there is some c that is a concretization of g 
 every c that is a concretization of g specifically denotes r"""@en ;
                 obo:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
+                rdfs:comment ""@en ;
                 rdfs:label "denotes"@en .
 
 
@@ -423,6 +432,7 @@ obo:IAO_0000235 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:BFO_0000001 ;
                 rdfs:range obo:IAO_0000030 ;
                 obo:IAO_0000115 "inverse of the relation 'denotes'"@en ;
+                obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/206> ;
                 rdfs:label "denoted by"@en .
 
 
@@ -494,6 +504,7 @@ obo:OBI_0000417 rdf:type owl:ObjectProperty ;
                 obo:IAO_0000112 "A cell sorting process achieves the objective specification 'material separation objective'" ;
                 obo:IAO_0000115 "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."@en ;
                 obo:IAO_0000119 "PPPB branch derived" ;
+                obo:IAO_0000232 "modified according to email thread from 1/23/09 in accordince with DT and PPPB branch" ;
                 rdfs:label "achieves_planned_objective" ;
                 co:PMD_0000064 "https://github.com/search?q=repo%3Amaterialdigital%2Fcore-ontology+path%3A%2F%5Epatterns%5C%2F%2F+OBI_0000417&type=code" .
 
@@ -524,6 +535,7 @@ obo:RO_0000052 rdf:type owl:ObjectProperty ;
                obo:IAO_0000112 "this fragility is a characteristic of this vase"@en ,
                                "this red color is a characteristic of this apple"@en ;
                obo:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+               rdfs:comment "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing." ;
                rdfs:label "characteristic of"@en .
 
 
@@ -604,6 +616,7 @@ obo:RO_0000079 rdf:type owl:ObjectProperty ;
                obo:IAO_0000112 "this catalysis function is a function of this enzyme"@en ;
                obo:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists."@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "function of"@en .
 
 
@@ -621,6 +634,7 @@ obo:RO_0000080 rdf:type owl:ObjectProperty ;
                obo:IAO_0000112 "this red color is a quality of this apple"@en ;
                obo:IAO_0000115 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A quality inheres in its bearer at all times for which the quality exists."@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "quality of"@en .
 
 
@@ -631,6 +645,7 @@ obo:RO_0000081 rdf:type owl:ObjectProperty ;
                obo:IAO_0000112 "this investigator role is a role of this person"@en ;
                obo:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "role of"@en .
 
 
@@ -680,6 +695,7 @@ obo:RO_0000091 rdf:type owl:ObjectProperty ;
 obo:RO_0000092 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000052 ;
                obo:IAO_0000115 "inverse of has disposition" ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "disposition of"@en .
 
 
@@ -748,6 +764,7 @@ obo:RO_0002082 rdf:type owl:ObjectProperty ,
                         owl:SymmetricProperty ,
                         owl:TransitiveProperty ;
                obo:IAO_0000115 "x simultaneous with y iff ω(x) = ω(y) and ω(α ) = ω(α), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point and '=' indicates the same instance in time." ;
+               rdfs:comment "t1 simultaneous_with t2 iff:=  t1 before_or_simultaneous_with t2  and not (t1 before t2)"@en ;
                rdfs:label "simultaneous with"@en .
 
 
@@ -897,7 +914,7 @@ co:PMD_0000069 rdf:type owl:ObjectProperty ;
                            ] ;
                rdfs:range co:PMD_0000068 ;
                rdfs:label "has state"@en ;
-               skos:definition "relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of"@en ;
+               skos:definition "relates an anchor continuant to a temporally qualified continuant that represents a specific temporal phase of its existence."@en ;
                co:PMD_0001032 "https://github.com/materialdigital/core-ontology/issues/185" .
 
 
@@ -905,7 +922,7 @@ co:PMD_0000069 rdf:type owl:ObjectProperty ;
 co:PMD_0000070 rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ;
                rdfs:label "is state of"@en ;
-               skos:definition "relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of" .
+               skos:definition "relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000077
@@ -924,10 +941,9 @@ co:PMD_0001028 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/pmd/co/PMD_0001029
 co:PMD_0001029 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain obo:BFO_0000017 ;
                rdfs:label "responds with"@en ;
-               skos:definition "The realizable entity must be \"stimulated\" by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response." .
+               skos:definition "The realizable entity must be \"stimulated\" by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020127
@@ -954,7 +970,6 @@ co:PMD_0025006 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/pmd/co/PMD_0025998
 co:PMD_0025998 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
                owl:inverseOf co:PMD_0025999 ;
                rdfs:domain obo:BFO_0000004 ;
                rdfs:range obo:BFO_0000145 ;
@@ -968,7 +983,6 @@ co:PMD_0025998 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/pmd/co/PMD_0025999
 co:PMD_0025999 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
                owl:propertyChainAxiom ( co:PMD_0025999
                                         obo:BFO_0000050
                                       ) ;
@@ -1476,6 +1490,8 @@ obo:IAO_0000009 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000030 ;
                 obo:IAO_0000115 "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label"@en ;
                 obo:IAO_0000116 "http://www.golovchenko.org/cgi-bin/wnsearch?q=label#4n"@en ;
+                obo:IAO_0000232 """9/22/11 BP: changed the rdfs:label for this class from 'label' to 'datum label' to convey that this class is not intended to cover all kinds of labels (stickers, radiolabels, etc.), and not even all kind of textual labels, but rather the kind of labels occuring in a datum. 
+""" ;
                 rdfs:label "datum label"@en .
 
 
@@ -1571,6 +1587,13 @@ obo:IAO_0000104 rdf:type owl:Class ;
                                 "Alternative previous definition: a plan is a set of instructions that specify how an objective should be achieved"@en ;
                 obo:IAO_0000119 "OBI Plan and Planned Process branch"@en ,
                                 "OBI_0000344"@en ;
+                rdfs:comment """2/3/2009 Comment from OBI review.
+
+Action specification not well enough specified.
+Conditional specification not well enough specified.
+Question whether all plan specifications have objective specifications.
+
+Request that IAO either clarify these or change definitions not to use them"""@en ;
                 rdfs:label "plan specification"@en .
 
 
@@ -1621,6 +1644,8 @@ obo:IAO_0020000 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:IAO_0020010
                                 ] ;
                 obo:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
+                obo:IAO_0000233 "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
+                rdfs:comment "Sep 29, 2016: The current definition has been amended from the previous version: \"A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.\" to more accuratly reflect the necessary and sufficient condition on the class. (MB)"@en ;
                 rdfs:label "identifier"@en ;
                 co:PMD_0000060 "true"^^xsd:boolean .
 
@@ -1641,6 +1666,7 @@ obo:IAO_0020010 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:IAO_0020000
                                 ] ;
                 obo:IAO_0000115 "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."@en ;
+                obo:IAO_0000233 "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
                 rdfs:label "identifier creating process"@en .
 
 
@@ -1660,6 +1686,7 @@ obo:OBI_0000067 rdf:type owl:Class ;
                 obo:IAO_0000116 "Role call - 17nov-08: JF and MC think an evaluant role is always specified input of a process. Even in the case where we have an assay taking blood as evaluant and outputting blood, the blood is not the specified output at the end of the assay (the concentration of glucose in the blood is)"@en ,
                                 "examples of features that could be described in an evaluant: quality.... e.g. \"contains 10 pg/ml IL2\", or \"no glucose detected\")"@en ;
                 obo:IAO_0000119 "OBI" ;
+                obo:IAO_0000232 "Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term." ;
                 rdfs:label "evaluant role"@en .
 
 
@@ -2015,7 +2042,7 @@ co:PMD_0000595 rdf:type owl:Class ;
 co:PMD_0000596 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ;
                rdfs:label "deformation"@en ;
-               skos:definition "The deformation is a process describing a change in the shape, size, or structure of a material under the influence of stress or force."@en ;
+               skos:definition "The deformation is a process describing a change in the shape, size, or structure of a material often under the influence of stress or force."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -2207,10 +2234,10 @@ co:PMD_0000874 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/co/PMD_0000875
 co:PMD_0000875 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000856 ;
-               rdfs:label "Ein Mikroskopieverfahren, das sichtbares Licht und Linsen verwendet, um eine Probe zu vergrößern und abzubilden, und weit verbreitet zur Untersuchung der Mikrostruktur und Morphologie von Materialien ist."@de ,
-                          "Optische Mikroskopie"@de ,
+               rdfs:label "Optische Mikroskopie"@de ,
                           "optical microscopy"@en ;
-               skos:definition "A microscopy process that uses visible light and lenses to magnify and image a specimen, widely used for examining the microstructure and morphology of materials."@en ;
+               skos:definition "A microscopy process that uses visible light and lenses to magnify and image a specimen, widely used for examining the microstructure and morphology of materials."@en ,
+                               "Ein Mikroskopieverfahren, das sichtbares Licht und Linsen verwendet, um eine Probe zu vergrößern und abzubilden, und weit verbreitet zur Untersuchung der Mikrostruktur und Morphologie von Materialien ist."@de ;
                skos:example "An example is Light Microscopy."@en .
 
 
@@ -2545,7 +2572,7 @@ co:PMD_0020099 rdf:type owl:Class ;
                rdfs:comment """TODO: possibly extend for 2D (Graphene etc)
 
 More elaborate crystal descriptions may be found in http://emmo.info/domain-crystallography/crystallography or https://purls.helmholtz-metadaten.de/disos/cso"""@en ;
-               rdfs:label "bravais lattice (3d)"@en ;
+               rdfs:label "bravais lattice (3D)"@en ;
                skos:definition "The bravais lattice is a categorical value specification that specifies value of the crystal structure quality. It describes the possible geometric arrangement of lattice points in a crystal. The present descriptor is limited to the 14 possible three-dimensional arrangements."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
@@ -2816,6 +2843,7 @@ co:PMD_0025009 rdf:type owl:Class ;
                                                       rdf:type owl:Class
                                                     ]
                                ] ;
+               rdfs:comment "material reacting process has always energy minimization as a driving force."@en ;
                rdfs:label "material reacting process"@en ;
                skos:definition "Material reacting process is a process which occurs in a portion of matter due to some of its disposition or behavioral material property which has realization in some  stimulating process. Both the material reacting process and stimulating process must be occurent parts of a planned process, if the planned process takes place."@en .
 
@@ -2889,7 +2917,7 @@ co:PMD_0040001 rdf:type owl:Class ;
                rdfs:comment "Length is a size that describes the spatial extent of its bearer in one dimension."@en ;
                rdfs:label "length"@en ;
                skos:altLabel "dimension"@en ;
-               skos:definition "Length is a one dimensional size." ;
+               skos:definition "Length is a one dimensional size."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -2960,7 +2988,7 @@ co:PMD_0050157 rdf:type owl:Class ;
 co:PMD_0060007 rdf:type owl:Class ;
                rdfs:subClassOf obo:IAO_0000033 ;
                rdfs:label "material specification"@en ;
-               skos:definition "A directive information entity that defines the composition, properties, performance criteria, and acceptable standards for a material, guiding its selection, processing, and application in a specific context." ;
+               skos:definition "A directive information entity that defines the composition, properties, performance criteria, and acceptable standards for a material, guiding its selection, processing, and application in a specific context."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -3008,19 +3036,12 @@ co:PMD_0060009 rdf:type owl:Class ;
                                        rdfs:label "image transformation"@en .
 
 
-###  https://w3id.org/pmd/imt/IMT_0000004
-<https://w3id.org/pmd/imt/IMT_0000004> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000003> ;
-                                       rdfs:label "homography"@en ;
-                                       rdfs:seeAlso "https://medium.com/wanabilini/homography-transformations-in-practice-974c9e2730b2" ;
-                                       skos:definition "A homography is a image transformation which has two images as specified inputs, where a coordinate system of one image has a target role, and another image has a source role, and the specified output of the transformation is another image, which maps the content of a sourse image to the 2D spatial region (coordinate system) of a target image."@en .
-
-
 ###  https://w3id.org/pmd/imt/IMT_0000005
 <https://w3id.org/pmd/imt/IMT_0000005> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:IAO_0000027 ;
-                                       rdfs:label "image transformation ground truth"@en ;
-                                       skos:definition "Image transformation ground truth is a data set which is a specified input to the homography process. It consists of pairs of 2D coordinates, where one element of the pair refers to a coordinate in a reference frame of a source a image, and the other element - to a coordinate in a reference frame of a target image."@en .
+                                       rdfs:subClassOf obo:IAO_0000100 ;
+                                       obo:IAO_0000119 "https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5" ;
+                                       rdfs:label "point correspondence"@en ;
+                                       skos:definition "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000011
@@ -3042,13 +3063,84 @@ co:PMD_0060009 rdf:type owl:Class ;
                                        skos:definition "Warped image is an image which is a specified output of an image transofrmation process. It is derived from an image, which is a source member of a matching pair, that is a specified output of a image transformation process."@en .
 
 
+###  https://w3id.org/pmd/imt/IMT_0000013
+<https://w3id.org/pmd/imt/IMT_0000013> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000005>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:OBI_0000312 ;
+                                                                                    owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000018>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000312 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000018>
+                                                       ] ;
+                                       obo:IAO_0000119 "estimated point correspondences is a point correspondences data set which is a specified output from the estimation process"@en ;
+                                       rdfs:comment """TODO add axiom
+Fix defintion"""@en ;
+                                       rdfs:label "estimated point correspondences"@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000014
+<https://w3id.org/pmd/imt/IMT_0000014> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:IAO_0000030 ;
+                                       rdfs:label "transformation model"@de .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000015
+<https://w3id.org/pmd/imt/IMT_0000015> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000014> ;
+                                       rdfs:label "homography"@de .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000016
+<https://w3id.org/pmd/imt/IMT_0000016> rdf:type owl:Class ;
+                                       rdfs:subClassOf co:PMD_0000583 ;
+                                       rdfs:label "transformation model parametrization"@de .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000017
+<https://w3id.org/pmd/imt/IMT_0000017> rdf:type owl:Class ;
+                                       rdfs:subClassOf co:PMD_0000583 ;
+                                       rdfs:label "point correspondences acquisition"@de .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000018
+<https://w3id.org/pmd/imt/IMT_0000018> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000017> ;
+                                       rdfs:label "point correspondences acquisition using VLM"@de ;
+                                       skos:altLabel "automated point correspondences acquisition" .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000019
+<https://w3id.org/pmd/imt/IMT_0000019> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000014>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:OBI_0000312 ;
+                                                                                    owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000016>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000014> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000312 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000016>
+                                                       ] ;
+                                       rdfs:label "parameterized transofrmation model"@en ;
+                                       skos:altLabel "fitted transformation model"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
 ###  https://w3id.org/pmd/co/PMD_0020006
 co:PMD_0020006 rdf:type owl:NamedIndividual ;
-               rdfs:label "bravais lattice triclinic primitve"@en ;
+               rdfs:label "bravais lattice triclinic primitive"@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
