@@ -1,10 +1,6 @@
 ### GDCs
 https://w3id.org/pmd/co/PMD_0000885  # pole figure
 https://w3id.org/pmd/co/PMD_0025005  # 3D
-https://w3id.org/pmd/co/PMD_0000992  # time series
-https://w3id.org/pmd/co/PMD_0000946  # spectrum
-https://w3id.org/pmd/co/PMD_0025002  # chemical composition specification
-https://w3id.org/pmd/co/PMD_0025997  # fraction specification
 http://purl.obolibrary.org/obo/OBI_0001931  # scalar value specification
 http://purl.obolibrary.org/obo/IAO_0000109 # measurement datum
 http://purl.obolibrary.org/obo/UO_0000000 # Unit
@@ -23,9 +19,7 @@ https://w3id.org/pmd/co/PMD_0025016  # inner diameter
 https://w3id.org/pmd/co/PMD_0025017  # outer diameter
 https://w3id.org/pmd/co/PMD_0050153  # thickness
 https://w3id.org/pmd/co/PMD_0050154  #width
-https://w3id.org/pmd/co/PMD_0000512  # aggregate state
 https://w3id.org/pmd/co/PMD_0000503  # ASTM grain size
-https://w3id.org/pmd/co/PMD_0000551  # chemical composition
 https://w3id.org/pmd/co/PMD_0000591  # crystal structure
 https://w3id.org/pmd/co/PMD_0000853  # crystollagraphic texture
 https://w3id.org/pmd/co/PMD_0000595  # defect denisity
@@ -33,9 +27,6 @@ https://w3id.org/pmd/co/PMD_0000597  # density
 https://w3id.org/pmd/co/PMD_0020112  # grain size distribution
 https://w3id.org/pmd/co/PMD_0025003  # metallic grain structure
 https://w3id.org/pmd/co/PMD_0020104  # volume proportion
-https://w3id.org/pmd/co/PMD_0020207  # amount of substance
-https://w3id.org/pmd/co/PMD_0020102  # mass proportion 
-https://w3id.org/pmd/co/PMD_0020205  # defect role 
 http://purl.obolibrary.org/obo/OBI_0000067 # evaluant role
 https://w3id.org/pmd/co/PMD_0025018  # geometric relational quality
 
@@ -50,11 +41,14 @@ https://w3id.org/pmd/co/PMD_0001017  # x-ray mapping
 https://w3id.org/pmd/co/PMD_0000819  # light microscopy
 https://w3id.org/pmd/co/PMD_0000625  # electron microscopy
 https://w3id.org/pmd/co/PMD_0000933  # simulation process
+https://w3id.org/pmd/co/PMD_0000865  # multimodel deep learning
+https://w3id.org/pmd/co/PMD_0000913  # reiforcement learning
+https://w3id.org/pmd/co/PMD_0000660  # generative deep learning
+https://w3id.org/pmd/co/PMD_0000964  # supervised machine learning
+https://w3id.org/pmd/co/PMD_0001003  # unsupervised machine learning  #
 
-https://w3id.org/pmd/co/PMD_0000950 # stimulating process
+
 https://w3id.org/pmd/co/PMD_0025012 # analytical calculation
-https://w3id.org/pmd/co/PMD_0025009 # material reacting process
-https://w3id.org/pmd/co/PMD_0000596 # deformation
 http://purl.obolibrary.org/obo/BFO_0000202 # temporal interval
 http://purl.obolibrary.org/obo/BFO_0000203 # temporal instance
 
