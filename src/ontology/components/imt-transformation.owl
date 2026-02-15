@@ -63,23 +63,13 @@ image derived from is a relation between an warped image and an image, which is 
     
 
 
-    <!-- https://w3id.org/pmd/imt/IMT_0000004 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000004">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000003"/>
-        <rdfs:label xml:lang="en">homography</rdfs:label>
-        <rdfs:seeAlso>https://medium.com/wanabilini/homography-transformations-in-practice-974c9e2730b2</rdfs:seeAlso>
-        <skos:definition xml:lang="en">A homography is a image transformation which has two images as specified inputs, where a coordinate system of one image has a target role, and another image has a source role, and the specified output of the transformation is another image, which maps the content of a sourse image to the 2D spatial region (coordinate system) of a target image.</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/imt/IMT_0000005 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <rdfs:label xml:lang="en">image transformation ground truth</rdfs:label>
-        <skos:definition xml:lang="en">Image transformation ground truth is a data set which is a specified input to the homography process. It consists of pairs of 2D coordinates, where one element of the pair refers to a coordinate in a reference frame of a source a image, and the other element - to a coordinate in a reference frame of a target image.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <obo:IAO_0000119>https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">point correspondence</rdfs:label>
+        <skos:definition xml:lang="en">Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´.</skos:definition>
     </owl:Class>
     
 
@@ -101,6 +91,96 @@ image derived from is a relation between an warped image and an image, which is 
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000101"/>
         <rdfs:label xml:lang="en">warped image</rdfs:label>
         <skos:definition xml:lang="en">Warped image is an image which is a specified output of an image transofrmation process. It is derived from an image, which is a source member of a matching pair, that is a specified output of a image transformation process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000013">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/imt/IMT_0000005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000018"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
+        <obo:IAO_0000119 xml:lang="en">estimated point correspondences is a point correspondences data set which is a specified output from the estimation process</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">TODO add axiom
+Fix defintion</rdfs:comment>
+        <rdfs:label xml:lang="en">estimated point correspondences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000014 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="de">transformation model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000015 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000015">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000014"/>
+        <rdfs:label xml:lang="de">homography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000016 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000016">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
+        <rdfs:label xml:lang="de">transformation model parametrization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000017">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
+        <rdfs:label xml:lang="de">point correspondences acquisition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000018 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000018">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000017"/>
+        <rdfs:label xml:lang="de">point correspondences acquisition using VLM</rdfs:label>
+        <skos:altLabel>automated point correspondences acquisition</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000019 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000019">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/imt/IMT_0000014"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000016"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000014"/>
+        <rdfs:label xml:lang="en">parameterized transofrmation model</rdfs:label>
+        <skos:altLabel xml:lang="en">fitted transformation model</skos:altLabel>
     </owl:Class>
 </rdf:RDF>
 
