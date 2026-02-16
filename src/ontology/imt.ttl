@@ -16,11 +16,11 @@
 @base <https://w3id.org/pmd/imt.ttl> .
 
 <https://w3id.org/pmd/imt.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-15/imt.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-16/imt.ttl> ;
                                 dcterms:description "None" ;
                                 dcterms:license <https://creativecommons.org/licenses/unspecified> ;
                                 dcterms:title "ImageTrans: Application-level ontology for image transformation" ;
-                                owl:versionInfo "2026-02-15" .
+                                owl:versionInfo "2026-02-16" .
 
 #################################################################
 #    Annotation properties
@@ -791,11 +791,22 @@ obo:RO_0002234 rdf:type owl:ObjectProperty ;
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002350
-obo:RO_0002350 rdf:type owl:ObjectProperty .
+obo:RO_0002350 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000050 ;
+               owl:inverseOf obo:RO_0002351 ;
+               obo:IAO_0000112 "An organism that is a member of a population of organisms" ;
+               obo:IAO_0000115 "is member of is a mereological relation between a item and a collection." ;
+               obo:IAO_0000119 "SIO" ;
+               rdfs:label "member of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002351
-obo:RO_0002351 rdf:type owl:ObjectProperty .
+obo:RO_0002351 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:BFO_0000051 ;
+               rdf:type owl:IrreflexiveProperty ;
+               obo:IAO_0000115 "has member is a mereological relation between a collection and an item." ;
+               obo:IAO_0000119 "SIO" ;
+               rdfs:label "has member"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002352
@@ -1841,7 +1852,11 @@ co:PMD_0000068 rdf:type owl:Class ;
 
 
 ###  https://w3id.org/pmd/co/PMD_0000501
-co:PMD_0000501 rdf:type owl:Class .
+co:PMD_0000501 rdf:type owl:Class ;
+               rdfs:subClassOf obo:IAO_0000027 ;
+               rdfs:label "1D"@en ;
+               skos:definition "1-D is an information content entity representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis."@en ;
+               co:PMD_0000060 "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000502
@@ -2647,6 +2662,36 @@ co:PMD_0020161 rdf:type owl:Class ;
                skos:definition "Activity (a_X) is a relational property between a chemical species X and a non-ideal solution. a_X is a measure of the effective concentration of a chemical species X in the non-ideal solution, accounting for interactions between particles. It is defined as the product of the concentration and an activity coefficient, where the activity coefficient corrects for non-ideal behavior."@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0020216
+co:PMD_0020216 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( co:PMD_0020217
+                                                 co:PMD_0020218
+                                                 co:PMD_0020219
+                                                 co:PMD_0020242
+                                               )
+                                   ] ;
+               rdfs:subClassOf obo:OBI_0001930 ;
+               rdfs:label "order scale value"@en ;
+               skos:definition "possible values of characteristic length over which structural correlations persist in a material"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020220
+co:PMD_0020220 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty co:PMD_0000077 ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass co:PMD_0020216
+                                   ] ;
+               rdfs:subClassOf co:PMD_0020131 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty co:PMD_0000077 ;
+                                 owl:someValuesFrom co:PMD_0020216
+                               ] ;
+               rdfs:label "order scale"@en ;
+               skos:definition "characteristic length over which structural correlations persist in a material"@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0025001
 co:PMD_0025001 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
@@ -2837,22 +2882,38 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                          owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                                                          owl:onClass co:PMD_0000502
                                                        ] ;
-                                       rdfs:comment "TODO: expand the defintion" ;
                                        rdfs:label "matching pair"@en ;
-                                       skos:definition "Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source."@en .
+                                       skos:definition "Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000003
 <https://w3id.org/pmd/imt/IMT_0000003> rdf:type owl:Class ;
-                                       rdfs:subClassOf co:PMD_0000933 ;
-                                       rdfs:label "image transformation"@en .
+                                       rdfs:subClassOf co:PMD_0000583 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom obo:IAO_0000101
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000019>
+                                                       ] ;
+                                       rdfs:label "image transformation"@en ;
+                                       skos:altLabel "image mapping"@en ;
+                                       skos:definition "Image transformation process is a computing process which has some source  image and some parameterized transformation model, e.g., estimated homography, as specified inputs, and a warped image as a specified ouput. Here, the parameterized transformation model matches 2D coordinates of a scene of a source image to the coordinates of a scene of a target image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000004
+<https://w3id.org/pmd/imt/IMT_0000004> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000017> ;
+                                       rdfs:label "manual point correspondences acquisition"@en ;
+                                       skos:definition "Manual point correspondences acquisition is point correspondences acquisition, where extraction and matching of key points in the images is performed by human efforts."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000005
 <https://w3id.org/pmd/imt/IMT_0000005> rdf:type owl:Class ;
                                        rdfs:subClassOf obo:IAO_0000100 ;
                                        obo:IAO_0000119 "https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5" ;
-                                       rdfs:label "point correspondence"@en ;
+                                       rdfs:label "point correspondences"@en ;
                                        skos:definition "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´."@en .
 
 
@@ -2890,9 +2951,7 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                          owl:onProperty obo:OBI_0000312 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000018>
                                                        ] ;
-                                       obo:IAO_0000119 "estimated point correspondences is a point correspondences data set which is a specified output from the estimation process"@en ;
-                                       rdfs:comment """TODO add axiom
-Fix defintion"""@en ;
+                                       obo:IAO_0000119 "Estimated point correspondences is a point correspondences data set which is an output of some deep-learning point correspondences acquisition."@en ;
                                        rdfs:label "estimated point correspondences"@en .
 
 
@@ -2910,21 +2969,49 @@ Fix defintion"""@en ;
 
 ###  https://w3id.org/pmd/imt/IMT_0000016
 <https://w3id.org/pmd/imt/IMT_0000016> rdf:type owl:Class ;
-                                       rdfs:subClassOf co:PMD_0000583 ;
+                                       rdfs:subClassOf co:PMD_0000583 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
+                                                       ] ;
                                        rdfs:label "transformation model parametrization"@de .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000017
 <https://w3id.org/pmd/imt/IMT_0000017> rdf:type owl:Class ;
-                                       rdfs:subClassOf co:PMD_0000583 ;
-                                       rdfs:label "point correspondences acquisition"@de .
+                                       rdfs:subClassOf co:PMD_0000583 ,
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:OBI_0000299 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:OBI_0000293 ;
+                                                                                owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                owl:onClass obo:IAO_0000101
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom obo:IAO_0000101
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000299 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000005>
+                                                       ] ;
+                                       obo:IAO_0000119 "https://arxiv.org/pdf/2505.16599" ;
+                                       rdfs:label "point correspondences acquisition"@de ;
+                                       skos:definition "Point correspondences acquisition is a computing process which has two images with different imaging scenes as specified inputs and a point correspondences data set as a specified output. It includes expatraction and matching of the points from the images, as well as removal of outlier points."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000018
 <https://w3id.org/pmd/imt/IMT_0000018> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000017> ;
-                                       rdfs:label "point correspondences acquisition using VLM"@de ;
-                                       skos:altLabel "automated point correspondences acquisition" .
+                                       rdfs:subClassOf co:PMD_0000594 ,
+                                                       <https://w3id.org/pmd/imt/IMT_0000017> ;
+                                       rdfs:label "deep-learning point correspondences acquisition"@de ;
+                                       skos:altLabel "automated point correspondences acquisition" ;
+                                       skos:definition "Deep-learning point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using neural networks, which map points from one image to another."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000019
@@ -2944,6 +3031,25 @@ Fix defintion"""@en ;
                                                        ] ;
                                        rdfs:label "parameterized transofrmation model"@en ;
                                        skos:altLabel "fitted transformation model"@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000020
+<https://w3id.org/pmd/imt/IMT_0000020> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/imt/IMT_0000005>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty obo:OBI_0000312 ;
+                                                                                    owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000004>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000312 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/imt/IMT_0000004>
+                                                       ] ;
+                                       rdfs:label "manually created point correspondences"@en ;
+                                       skos:definition "Estimated point correspondences is a point correspondences data set which is an output of some manual point correspondences acquisition."@en .
 
 
 #################################################################
@@ -3137,6 +3243,30 @@ co:PMD_0020125 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state suprasolid"@en ;
                skos:definition "A state that exhibits suprafluid and solid properties."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
+
+
+###  https://w3id.org/pmd/co/PMD_0020217
+co:PMD_0020217 rdf:type owl:NamedIndividual ;
+               rdfs:label "short range order"@en ;
+               skos:definition "periodic arrangement of structural features up to a few entities"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020218
+co:PMD_0020218 rdf:type owl:NamedIndividual ;
+               rdfs:label "medium range order"@en ;
+               skos:definition "periodic arrangement of structural features of many entities"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020219
+co:PMD_0020219 rdf:type owl:NamedIndividual ;
+               rdfs:label "long range order"@en ;
+               skos:definition "periodic arrangement of structural features of virtually all entities"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020242
+co:PMD_0020242 rdf:type owl:NamedIndividual ;
+               rdfs:label "no range order"@en ;
+               skos:definition "no periodic arrangement of structural features of entites"@en .
 
 
 #################################################################

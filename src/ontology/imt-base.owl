@@ -12,12 +12,12 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/imt/imt-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-15/imt-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-16/imt-base.owl"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title>ImageTrans: Application-level ontology for image transformation</dcterms:title>
-        <owl:versionInfo>2026-02-15</owl:versionInfo>
+        <owl:versionInfo>2026-02-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -755,7 +755,12 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
 
     <!-- https://w3id.org/pmd/co/PMD_0000501 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000501"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000501">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">1D</rdfs:label>
+        <skos:definition xml:lang="en">1-D is an information content entity representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis.</skos:definition>
+        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
+    </owl:Class>
     
 
 
@@ -1842,6 +1847,49 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0020216 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020216">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020217"/>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020218"/>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020219"/>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020242"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <rdfs:label xml:lang="en">order scale value</rdfs:label>
+        <skos:definition xml:lang="en">possible values of characteristic length over which structural correlations persist in a material</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020220 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020220">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000077"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/pmd/co/PMD_0020216"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000077"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020216"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">order scale</rdfs:label>
+        <skos:definition xml:lang="en">characteristic length over which structural correlations persist in a material</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0025001 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025001">
@@ -2097,9 +2145,8 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                 <owl:onClass rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>TODO: expand the defintion</rdfs:comment>
         <rdfs:label xml:lang="en">matching pair</rdfs:label>
-        <skos:definition xml:lang="en">Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source.</skos:definition>
+        <skos:definition xml:lang="en">Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image.</skos:definition>
     </owl:Class>
     
 
@@ -2107,8 +2154,32 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     <!-- https://w3id.org/pmd/imt/IMT_0000003 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000003">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000933"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000101"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000019"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">image transformation</rdfs:label>
+        <skos:altLabel xml:lang="en">image mapping</skos:altLabel>
+        <skos:definition xml:lang="en">Image transformation process is a computing process which has some source  image and some parameterized transformation model, e.g., estimated homography, as specified inputs, and a warped image as a specified ouput. Here, the parameterized transformation model matches 2D coordinates of a scene of a source image to the coordinates of a scene of a target image.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000017"/>
+        <rdfs:label xml:lang="en">manual point correspondences acquisition</rdfs:label>
+        <skos:definition xml:lang="en">Manual point correspondences acquisition is point correspondences acquisition, where extraction and matching of key points in the images is performed by human efforts.</skos:definition>
     </owl:Class>
     
 
@@ -2118,7 +2189,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
         <obo:IAO_0000119>https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">point correspondence</rdfs:label>
+        <rdfs:label xml:lang="en">point correspondences</rdfs:label>
         <skos:definition xml:lang="en">Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´.</skos:definition>
     </owl:Class>
     
@@ -2172,9 +2243,7 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000018"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119 xml:lang="en">estimated point correspondences is a point correspondences data set which is a specified output from the estimation process</obo:IAO_0000119>
-        <rdfs:comment xml:lang="en">TODO add axiom
-Fix defintion</rdfs:comment>
+        <obo:IAO_0000119 xml:lang="en">Estimated point correspondences is a point correspondences data set which is an output of some deep-learning point correspondences acquisition.</obo:IAO_0000119>
         <rdfs:label xml:lang="en">estimated point correspondences</rdfs:label>
     </owl:Class>
     
@@ -2202,6 +2271,12 @@ Fix defintion</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000016">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="de">transformation model parametrization</rdfs:label>
     </owl:Class>
     
@@ -2211,7 +2286,24 @@ Fix defintion</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000017">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/IAO_0000101"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>https://arxiv.org/pdf/2505.16599</obo:IAO_0000119>
         <rdfs:label xml:lang="de">point correspondences acquisition</rdfs:label>
+        <skos:definition xml:lang="en">Point correspondences acquisition is a computing process which has two images with different imaging scenes as specified inputs and a point correspondences data set as a specified output. It includes expatraction and matching of the points from the images, as well as removal of outlier points.</skos:definition>
     </owl:Class>
     
 
@@ -2219,9 +2311,11 @@ Fix defintion</rdfs:comment>
     <!-- https://w3id.org/pmd/imt/IMT_0000018 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000018">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000594"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000017"/>
-        <rdfs:label xml:lang="de">point correspondences acquisition using VLM</rdfs:label>
+        <rdfs:label xml:lang="de">deep-learning point correspondences acquisition</rdfs:label>
         <skos:altLabel>automated point correspondences acquisition</skos:altLabel>
+        <skos:definition xml:lang="en">Deep-learning point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using neural networks, which map points from one image to another.</skos:definition>
     </owl:Class>
     
 
@@ -2249,6 +2343,33 @@ Fix defintion</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">parameterized transofrmation model</rdfs:label>
         <skos:altLabel xml:lang="en">fitted transformation model</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000020 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000020">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/imt/IMT_0000005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000004"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">manually created point correspondences</rdfs:label>
+        <skos:definition xml:lang="en">Estimated point correspondences is a point correspondences data set which is an output of some manual point correspondences acquisition.</skos:definition>
     </owl:Class>
     
 
@@ -2539,6 +2660,42 @@ Fix defintion</rdfs:comment>
         <rdfs:label xml:lang="en">aggregate state suprasolid</rdfs:label>
         <skos:definition xml:lang="en">A state that exhibits suprafluid and solid properties.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020217 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020217">
+        <rdfs:label xml:lang="en">short range order</rdfs:label>
+        <skos:definition xml:lang="en">periodic arrangement of structural features up to a few entities</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020218 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020218">
+        <rdfs:label xml:lang="en">medium range order</rdfs:label>
+        <skos:definition xml:lang="en">periodic arrangement of structural features of many entities</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020219 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020219">
+        <rdfs:label xml:lang="en">long range order</rdfs:label>
+        <skos:definition xml:lang="en">periodic arrangement of structural features of virtually all entities</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020242 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020242">
+        <rdfs:label xml:lang="en">no range order</rdfs:label>
+        <skos:definition xml:lang="en">no periodic arrangement of structural features of entites</skos:definition>
     </owl:NamedIndividual>
     
 

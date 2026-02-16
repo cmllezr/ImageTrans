@@ -139,6 +139,8 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020143>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020148>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020150>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020161>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020216>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020220>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025003>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025005>))
@@ -159,6 +161,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0060009>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000000>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000002>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000003>))
+Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000004>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000005>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000011>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000013>))
@@ -168,6 +171,7 @@ Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000016>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000017>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000018>))
 Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000019>))
+Declaration(Class(<https://w3id.org/pmd/imt/IMT_0000020>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
@@ -273,6 +277,10 @@ Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020122>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020123>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020124>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020125>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020217>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020218>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020219>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020242>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000112>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
@@ -912,6 +920,23 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002234> "has output"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0000057>)
 InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0002353>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002350> (member of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0002350> "An organism that is a member of a population of organisms")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002350> "is member of is a mereological relation between a item and a collection.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/RO_0002350> "SIO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002350> "member of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002350> <http://purl.obolibrary.org/obo/BFO_0000050>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002350> <http://purl.obolibrary.org/obo/RO_0002351>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002351> (has member)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002351> "has member is a mereological relation between a collection and an item.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/RO_0002351> "SIO")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002351> "has member"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/BFO_0000051>)
+IrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002352> (input of)
 
@@ -1644,6 +1669,13 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> <http://purl.obolibrary.org/obo
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000108> <http://purl.obolibrary.org/obo/BFO_0000008>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000070> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<https://w3id.org/pmd/co/PMD_0000068>))))
 
+# Class: <https://w3id.org/pmd/co/PMD_0000501> (1D)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000501> "1D"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0000501> "1-D is an information content entity representing a one-dimensional structure or model representing a single linear dimension, often used in material science simulations or analysis."@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0000501> "true"^^xsd:boolean)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000501> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000502> (2D)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000502> "2D"@en)
@@ -1981,7 +2013,7 @@ EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000950> ObjectIntersectionOf(<ht
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> <http://purl.obolibrary.org/obo/BFO_0000015>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectIntersectionOf(ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000016> <https://w3id.org/pmd/co/PMD_0000005>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <https://w3id.org/pmd/co/PMD_0000001>))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000957> (Struktur Eigenschaften Analyseverfahren)
+# Class: <https://w3id.org/pmd/co/PMD_0000957> (structural property analyzing process)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "Struktur Eigenschaften Analyseverfahren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000957> "structural property analyzing process"@en)
@@ -2213,6 +2245,21 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020161> "activity (
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020161> "Activity (a_X) is a relational property between a chemical species X and a non-ideal solution. a_X is a measure of the effective concentration of a chemical species X in the non-ideal solution, accounting for interactions between particles. It is defined as the product of the concentration and an activity coefficient, where the activity coefficient corrects for non-ideal behavior."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
+# Class: <https://w3id.org/pmd/co/PMD_0020216> (order scale value)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020216> "order scale value"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020216> "possible values of characteristic length over which structural correlations persist in a material"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020216> ObjectOneOf(<https://w3id.org/pmd/co/PMD_0020217> <https://w3id.org/pmd/co/PMD_0020218> <https://w3id.org/pmd/co/PMD_0020219> <https://w3id.org/pmd/co/PMD_0020242>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020216> <http://purl.obolibrary.org/obo/OBI_0001930>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020220> (order scale)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020220> "order scale"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020220> "characteristic length over which structural correlations persist in a material"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020220> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020216>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020220> <https://w3id.org/pmd/co/PMD_0020131>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020220> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020216>))
+
 # Class: <https://w3id.org/pmd/co/PMD_0025001> (composition)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025001> "composition"@en)
@@ -2364,9 +2411,8 @@ SubClassOf(<https://w3id.org/pmd/imt/IMT_0000000> <http://purl.obolibrary.org/ob
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000002> (matching pair)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/imt/IMT_0000002> "TODO: expand the defintion")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000002> "matching pair"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000002> "Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000002> "Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image."@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> <http://purl.obolibrary.org/obo/IAO_0000100>)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000007> <https://w3id.org/pmd/co/PMD_0000502>))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectSomeValuesFrom(<https://w3id.org/pmd/imt/IMT_0000008> <https://w3id.org/pmd/co/PMD_0000502>))
@@ -2375,12 +2421,22 @@ SubClassOf(<https://w3id.org/pmd/imt/IMT_0000002> ObjectExactCardinality(2 <http
 # Class: <https://w3id.org/pmd/imt/IMT_0000003> (image transformation)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000003> "image transformation"@en)
-SubClassOf(<https://w3id.org/pmd/imt/IMT_0000003> <https://w3id.org/pmd/co/PMD_0000933>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/imt/IMT_0000003> "image mapping"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000003> "Image transformation process is a computing process which has some source  image and some parameterized transformation model, e.g., estimated homography, as specified inputs, and a warped image as a specified ouput. Here, the parameterized transformation model matches 2D coordinates of a scene of a source image to the coordinates of a scene of a target image."@en)
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000003> <https://w3id.org/pmd/co/PMD_0000583>)
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000293> <http://purl.obolibrary.org/obo/IAO_0000101>))
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000293> <https://w3id.org/pmd/imt/IMT_0000019>))
 
-# Class: <https://w3id.org/pmd/imt/IMT_0000005> (point correspondence)
+# Class: <https://w3id.org/pmd/imt/IMT_0000004> (manual point correspondences acquisition)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000004> "manual point correspondences acquisition"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000004> "Manual point correspondences acquisition is point correspondences acquisition, where extraction and matching of key points in the images is performed by human efforts."@en)
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000004> <https://w3id.org/pmd/imt/IMT_0000017>)
+
+# Class: <https://w3id.org/pmd/imt/IMT_0000005> (point correspondences)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/imt/IMT_0000005> "https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5")
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000005> "point correspondence"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000005> "point correspondences"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000005> "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´."@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000005> <http://purl.obolibrary.org/obo/IAO_0000100>)
 
@@ -2393,9 +2449,7 @@ SubClassOf(<https://w3id.org/pmd/imt/IMT_0000011> <http://purl.obolibrary.org/ob
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000013> (estimated point correspondences)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/imt/IMT_0000013> "estimated point correspondences is a point correspondences data set which is a specified output from the estimation process"@en)
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/imt/IMT_0000013> "TODO add axiom
-Fix defintion"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/imt/IMT_0000013> "Estimated point correspondences is a point correspondences data set which is an output of some deep-learning point correspondences acquisition."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000013> "estimated point correspondences"@en)
 EquivalentClasses(<https://w3id.org/pmd/imt/IMT_0000013> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://w3id.org/pmd/imt/IMT_0000018>)))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000013> <https://w3id.org/pmd/imt/IMT_0000005>)
@@ -2414,16 +2468,22 @@ SubClassOf(<https://w3id.org/pmd/imt/IMT_0000015> <https://w3id.org/pmd/imt/IMT_
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000016> "transformation model parametrization"@de)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000016> <https://w3id.org/pmd/co/PMD_0000583>)
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000016> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000293> <https://w3id.org/pmd/imt/IMT_0000005>))
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000017> (point correspondences acquisition)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <https://w3id.org/pmd/imt/IMT_0000017> "https://arxiv.org/pdf/2505.16599")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000017> "point correspondences acquisition"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000017> "Point correspondences acquisition is a computing process which has two images with different imaging scenes as specified inputs and a point correspondences data set as a specified output. It includes expatraction and matching of the points from the images, as well as removal of outlier points."@en)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000017> <https://w3id.org/pmd/co/PMD_0000583>)
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000017> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <https://w3id.org/pmd/imt/IMT_0000005>) ObjectExactCardinality(2 <http://purl.obolibrary.org/obo/OBI_0000293> <http://purl.obolibrary.org/obo/IAO_0000101>)))
 
-# Class: <https://w3id.org/pmd/imt/IMT_0000018> (point correspondences acquisition using VLM)
+# Class: <https://w3id.org/pmd/imt/IMT_0000018> (deep-learning point correspondences acquisition)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000018> "point correspondences acquisition using VLM"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000018> "deep-learning point correspondences acquisition"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/imt/IMT_0000018> "automated point correspondences acquisition")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000018> "Deep-learning point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using neural networks, which map points from one image to another."@en)
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000018> <https://w3id.org/pmd/co/PMD_0000594>)
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000018> <https://w3id.org/pmd/imt/IMT_0000017>)
 
 # Class: <https://w3id.org/pmd/imt/IMT_0000019> (parameterized transofrmation model)
@@ -2432,6 +2492,13 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000019> "parameter
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/imt/IMT_0000019> "fitted transformation model"@en)
 EquivalentClasses(<https://w3id.org/pmd/imt/IMT_0000019> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000014> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://w3id.org/pmd/imt/IMT_0000016>)))
 SubClassOf(<https://w3id.org/pmd/imt/IMT_0000019> <https://w3id.org/pmd/imt/IMT_0000014>)
+
+# Class: <https://w3id.org/pmd/imt/IMT_0000020> (manually created point correspondences)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/imt/IMT_0000020> "manually created point correspondences"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/imt/IMT_0000020> "Estimated point correspondences is a point correspondences data set which is an output of some manual point correspondences acquisition."@en)
+EquivalentClasses(<https://w3id.org/pmd/imt/IMT_0000020> ObjectIntersectionOf(<https://w3id.org/pmd/imt/IMT_0000005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <https://w3id.org/pmd/imt/IMT_0000004>)))
+SubClassOf(<https://w3id.org/pmd/imt/IMT_0000020> <https://w3id.org/pmd/imt/IMT_0000005>)
 
 
 ############################
@@ -2596,6 +2663,26 @@ AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020125> "aggregate state suprasolid"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020125> "A state that exhibits suprafluid and solid properties."@en)
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/co/PMD_0020125> "true"^^xsd:boolean)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020217> (short range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020217> "short range order"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020217> "periodic arrangement of structural features up to a few entities"@en)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020218> (medium range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020218> "medium range order"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020218> "periodic arrangement of structural features of many entities"@en)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020219> (long range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020219> "long range order"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020219> "periodic arrangement of structural features of virtually all entities"@en)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020242> (no range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020242> "no range order"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020242> "no periodic arrangement of structural features of entites"@en)
 
 
 DisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/BFO_0000020> <http://purl.obolibrary.org/obo/BFO_0000031>)
