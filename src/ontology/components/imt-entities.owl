@@ -30,6 +30,18 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002350 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002350"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351"/>
+    
+
+
     <!-- https://w3id.org/pmd/imt/IMT_0000001 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/imt/IMT_0000001">
@@ -118,6 +130,12 @@
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000501 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000501"/>
+    
+
+
     <!-- https://w3id.org/pmd/imt/IMT_0000000 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000000">
@@ -151,9 +169,8 @@
                 <owl:onClass rdf:resource="https://w3id.org/pmd/co/PMD_0000502"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>TODO: expand the defintion</rdfs:comment>
         <rdfs:label xml:lang="en">matching pair</rdfs:label>
-        <skos:definition xml:lang="en">Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source.</skos:definition>
+        <skos:definition xml:lang="en">Matching pair is a data set which has exactly two 2D data items as its members, where one of the members is a target, and another one is a source. Here, the source image is to be mapped to the coordinate system (image scene) of a target image.</skos:definition>
     </owl:Class>
 </rdf:RDF>
 
