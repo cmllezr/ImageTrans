@@ -58,6 +58,7 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/pmd/imt/IMT_0000000"/>
         <rdfs:label xml:lang="en">has coordinate system</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">has coordinate system is a realtion between a data item (1D, 2D, or 3D) and a coordinate system of this data item.</skos:definition>
     </owl:ObjectProperty>
     
@@ -141,6 +142,7 @@
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="en">coordinate system</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">Coordinate system is an information content entity which describes the geometry of an image.</skos:definition>
     </owl:Class>
     

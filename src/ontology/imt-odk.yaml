@@ -28,6 +28,14 @@ import_group:
       mirror_from: https://raw.githubusercontent.com/information-artifact-ontology/IAO/refs/heads/master/iao.owl
       module_type: custom
 
+    - id: bfo
+      mirror_from: https://raw.githubusercontent.com/BFO-ontology/BFO-2020/refs/heads/master/21838-2/owl/bfo-core.owl
+      module_type: custom
+
+    - id: ro
+      mirror_from: https://raw.githubusercontent.com/oborel/obo-relations/refs/heads/master/ro-base.owl
+      module_type: custom
+
 # Components
 components:
   products:
