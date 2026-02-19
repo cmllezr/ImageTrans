@@ -46,7 +46,6 @@ $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms.txt \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term-file $(IMPORTDIR)/ro_terms.txt \
 		        --select complement --select annotation-properties \
-		 remove --term-file $(IMPORTDIR)/unwanted.txt  \
 		 odk:normalize --base-iri https://w3id.org/pmd \
 		               --subset-decls true --synonym-decls true \
 		 $(ANNOTATE_CONVERT_FILE)
@@ -64,7 +63,6 @@ $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl $(IMPORTDIR)/bfo_terms.txt \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term-file $(IMPORTDIR)/bfo_terms.txt \
 		        --select complement --select annotation-properties \
-		 remove --term-file $(IMPORTDIR)/unwanted.txt  \
 		 odk:normalize --base-iri https://w3id.org/pmd \
 		               --subset-decls true --synonym-decls true \
 		 $(ANNOTATE_CONVERT_FILE)
