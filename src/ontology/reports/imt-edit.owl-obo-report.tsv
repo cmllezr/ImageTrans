@@ -1,6 +1,5 @@
 Level	Rule Name	Subject	Property	Value
-WARN	missing_definition	coordinate system	definition	
-WARN	missing_definition	has coordinate system	definition	
+ERROR	deprecated_class_reference	coordinate system	rdfs:subClassOf	information content entity
 WARN	missing_definition	matching pair	definition	
 WARN	missing_definition	image transformation	definition	
 WARN	missing_definition	manual point correspondences acquisition	definition	
@@ -20,3 +19,8 @@ WARN	missing_definition	point correspondences acquisition	definition
 WARN	missing_definition	deep-learning point correspondences acquisition	definition	
 WARN	missing_definition	parameterized transofrmation model	definition	
 WARN	missing_definition	manually created point correspondences	definition	
+WARN	missing_definition	inlier point correspondence	definition	
+WARN	missing_definition	outlier point correspondence	definition	
+WARN	missing_definition	field of view	definition	
+WARN	missing_obsolete_label	coordinate system	rdfs:label	coordinate system@en
+WARN	missing_obsolete_label	has coordinate system	rdfs:label	has coordinate system@en

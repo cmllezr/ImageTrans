@@ -16,11 +16,11 @@
 @base <https://w3id.org/pmd/imt/imt-full.ttl> .
 
 <https://w3id.org/pmd/imt/imt-full.ttl> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-16/imt-full.ttl> ;
+                                         owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-19/imt-full.ttl> ;
                                          dcterms:description "None" ;
                                          dcterms:license <https://creativecommons.org/licenses/unspecified> ;
                                          dcterms:title "ImageTrans: Application-level ontology for image transformation" ;
-                                         owl:versionInfo "2026-02-16" .
+                                         owl:versionInfo "2026-02-19" .
 
 #################################################################
 #    Annotation properties
@@ -304,6 +304,12 @@ obo:BFO_0000138 rdf:type owl:ObjectProperty ;
                 rdfs:label "proper occurrent part of"@en ;
                 skos:definition "b proper occurrent part of c =Def b occurrent part of c & b and c are not identical"@en ;
                 skos:example "As for occurrent part of."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000210
+obo:BFO_0000210 rdf:type owl:ObjectProperty ;
+                rdfs:label "occupies spatial region"@en ;
+                skos:definition "b occupies spatial region r =Def b is an independent continuant that is not a spatial region & r is a spatial region & there is some time t such that every continuant part of b occupies some continuant part of r at t and no continuant part of b occupies any spatial region that is not a continuant part of r at t"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000039
@@ -733,6 +739,13 @@ obo:RO_0002082 rdf:type owl:ObjectProperty ,
                rdfs:label "simultaneous with"@en .
 
 
+###  http://purl.obolibrary.org/obo/RO_0002131
+obo:RO_0002131 rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               obo:IAO_0000115 "x overlaps y if and only if there exists some z such that x has part z and z part of y" ;
+               rdfs:label "overlaps"@en .
+
+
 ###  http://purl.obolibrary.org/obo/RO_0002223
 obo:RO_0002223 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:BFO_0000050 ;
@@ -956,6 +969,7 @@ RO's 'quality of' is functional i.e., a->b, a->c => b=c. The functionality is re
                                                    ] ;
                                        rdfs:range <https://w3id.org/pmd/imt/IMT_0000000> ;
                                        rdfs:label "has coordinate system"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
                                        skos:definition "has coordinate system is a realtion between a data item (1D, 2D, or 3D) and a coordinate system of this data item."@en .
 
 
@@ -1869,9 +1883,28 @@ co:PMD_0000502 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0000503
 co:PMD_0000503 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0020131 ;
+               rdfs:subClassOf co:PMD_0020243 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:IAO_0000417 ;
+                                 owl:someValuesFrom [ owl:intersectionOf ( obo:IAO_0000109
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty obo:OBI_0000312 ;
+                                                                             owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000015
+                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                         owl:onProperty obo:STATO_0000102 ;
+                                                                                                                         owl:someValuesFrom obo:IAO_0000104
+                                                                                                                       ]
+                                                                                                                     ) ;
+                                                                                                  rdf:type owl:Class
+                                                                                                ]
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                               ] ;
+               obo:IAO_0000116 "TODO: axiom needs refinement"@en ;
                rdfs:label "ASTM grainsize"@en ;
-               skos:definition "The ASTM grain size is a scalar specifically describing the size of grains in a crystalline material as defined by ASTM standards."@en ;
+               skos:definition "The ASTM grain size is a quality that is measured through a process that follows the ASTM standard."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -1888,7 +1921,7 @@ co:PMD_0000512 rdf:type owl:Class ;
                                  owl:someValuesFrom co:PMD_0020116
                                ] ;
                rdfs:label "aggregate state"@en ;
-               skos:definition "The aggregate state is a morphological quality representing the physical state of a material, such as solid, liquid, or gas."@en ;
+               skos:definition "an intensive quality representing the physical state of a material, such as solid, liquid, or gasous"@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -1911,10 +1944,18 @@ co:PMD_0000538 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0000551
 co:PMD_0000551 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0025001 ;
+               rdfs:subClassOf co:PMD_0025001 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty co:PMD_0000004 ;
+                                 owl:someValuesFrom co:PMD_0025002
+                               ] ;
+               rdfs:comment """See the editor note of composition to understand the difference between composition and chemical composition.
+
+See the pattern example of composition to underatand the difference between composition and proportion."""@en ;
                rdfs:label "chemical composition"@en ;
-               skos:definition "The chemical composition is a quality describing the types and proportions of elements or compounds present in a material."@en ;
-               co:PMD_0000060 "true"^^xsd:boolean .
+               skos:definition "The chemical composition is an intensive quality of a portion of matter which describes the types and proportions of pure chemical elements in the portion of matter, and it is a subject of some chemical composition data item."@en ;
+               co:PMD_0000060 "true"^^xsd:boolean ;
+               co:PMD_0000064 "Material has quality chemical composition. Chemical composition is a subject of chemical composition data item. Chemical composition data item has members fraction value specifications (which have a numeral and a unit). Material has part portion of carbon. Material has relational quality mass proportion. Portion of carbon  has relational quality mass proportion. Mass propotion is specified by value fraction value specification. Same approach for all chemical elements."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000553
@@ -1979,7 +2020,7 @@ co:PMD_0000594 rdf:type owl:Class ;
 co:PMD_0000595 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
                rdfs:label "defect density"@en ;
-               skos:definition "The defect density is a morphological quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties."@en ;
+               skos:definition "an intensive quality describing the number of defects per unit volume or area in a material, which can affect its mechanical and electronic properties"@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -2146,8 +2187,9 @@ co:PMD_0000834 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/co/PMD_0000853
 co:PMD_0000853 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0020131 ;
+               rdfs:comment "typically observed through crystallographic analysis"@en ;
                rdfs:label "crystallographic texture"@en ;
-               skos:definition "The crystallographic texture is a morphological quality describing the arrangement and orientation of grains in a metallic material, observed through crystallographic analysis."@en ;
+               skos:definition "an intensive quality describing the arrangement and orientation of grains in a polychrystal"@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -2477,9 +2519,38 @@ co:PMD_0001020 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0020003
 co:PMD_0020003 rdf:type owl:Class ;
-               rdfs:subClassOf obo:BFO_0000030 ;
+               rdfs:subClassOf obo:BFO_0000030 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0000086 ;
+                                 owl:someValuesFrom co:PMD_0000591
+                               ] ;
                rdfs:label "crystal"@en ;
-               skos:definition "A crystal is an object that has part some entities that concretize a Bravais lattice."@en ;
+               skos:definition "A crystal is an object that has a quality \"crystal structure\"."@en ;
+               co:PMD_0000060 "true"^^xsd:boolean .
+
+
+###  https://w3id.org/pmd/co/PMD_0020004
+co:PMD_0020004 rdf:type owl:Class ;
+               rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000027
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:IAO_0000136 ;
+                                                        owl:someValuesFrom co:PMD_0025001
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002351 ;
+                                 owl:someValuesFrom co:PMD_0025997
+                               ] ;
+               obo:IAO_0000116 """See editior note of composition to underatand the difference between composition and chemical composition data items.
+
+To understand the difference between the composition and the composition data item, one has to understand the difference between SDCs and GDCs in BFO. A triple \"material entity has quality compsition\", conveys the fact such quality exists without telling us what are fractions of compounds in this material entity. A triple \"compostion is subject of composition data item\" conveys that there's an information about values of these fractions. Think of comosition data item as a pdf where the composition is documented."""@en ;
+               rdfs:comment "These portions of other matters do not have to be portions of specific chemical elements, i.e., atomic composition, but rather portions of other substances, such as nitric acid and water."@en ;
+               rdfs:label "composition data item"@en ;
+               skos:altLabel "composition specification"@en ;
+               skos:definition "Composition data item is an information content entity that is about composition of a material enity. It has members fraction value specifications which specifiy values of propotions of compounds, which are parts of the material enity."@en ;
+               skos:example "Nitric acid solution has quality  composition, and  the composition data item is about this composition.The composition data item has members fraction specifications of nitric acid, e.g., 4 vol.%, and distilled water. These fraction specifications specify value of pure substances of nitric acid and distilled water, respectively. Furthermore, these fraction specifications specify values of relational qualities (volume) proportion of nitric acid and (volume) proportion of distilled water."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -2692,12 +2763,47 @@ co:PMD_0020220 rdf:type owl:Class ;
                skos:definition "characteristic length over which structural correlations persist in a material"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0020243
+co:PMD_0020243 rdf:type owl:Class ;
+               rdfs:subClassOf co:PMD_0020131 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0000080 ;
+                                 owl:someValuesFrom co:PMD_0020106
+                               ] ;
+               obo:IAO_0000116 "size values of indiviudal grains are properties of the respective objects"@en ;
+               rdfs:label "grain size"@en ;
+               skos:definition "an average size of the grains of a polycrystal"@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0025001
 co:PMD_0025001 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0020131 ;
+               rdfs:subClassOf co:PMD_0020131 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty co:PMD_0000004 ;
+                                 owl:someValuesFrom co:PMD_0020004
+                               ] ;
+               obo:IAO_0000116 "There's a dfference between composition and chemical compositon for the following reason: chemical compositon is relevant when the mass/volume/mole proportions of chemical elements(!) are identified, whlist composition includes proportions of molecules, other pure chemical substances, or even proptions of objects (in an object aggregate)."@en ;
                rdfs:label "composition"@en ;
-               skos:definition "Composition is a morphological quality describing the types and proportions of compounds (but not chemical elements) present in a portion of matter."@en ;
+               skos:definition "Composition is an intensive quality which defines types and proportions of compounds present in a material entity and is subject of some composition data item."@en ;
                skos:example "4 vol.% nitric acid solution, Styrene-Butadiene-Styrene (SBS) Block Copolymer with 50 vol.% of both styrene and butadiene"@en ;
+               co:PMD_0000060 "true"^^xsd:boolean ;
+               co:PMD_0000064 "Composition is a collective property of a portion of matter, i.e., the triple portion of matter has quality composition holds. As \"has quality\" is an inverse  functional property, only one instance of portion of matter can have this specific composition. However, proportions describe the relation between the prortion of matter (the whole) and some compound (the part). Thus, the following triples hold: portion of matter has relational quality proportion; portion of matter has part some substance (or whatever is your part); substance has relational quality proportion. \"Has relational quality\" is not inverse functional, i.e., it can point to a single object from 2 distinct subjects."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025002
+co:PMD_0025002 rdf:type owl:Class ;
+               rdfs:subClassOf [ owl:intersectionOf ( co:PMD_0020004
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:IAO_0000136 ;
+                                                        owl:someValuesFrom co:PMD_0000551
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+               rdfs:label "chemical composition data item"@en ;
+               skos:altLabel "chemical composition specification"@en ;
+               skos:definition "Chemical composition data item is an information content entity that is about composition of a portion of matter. It has members fraction value specifications which specifiy values of propotions of portions of (pure) chemical elements, which are parts of the portion of matter."@en ;
+               skos:example "Steel has quality chemical composition , and the chemical composition data item is about the chemical composition .The chemical composition data item has members fraction specifications of iron and carbon. These fraction specifications specify value of portion of iron and portion of carbon respectively. Furthermore, these fraction specifications specify  values of relational qualities (mass) proportion of iron and (mass) proportion of carbon."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -2766,6 +2872,36 @@ co:PMD_0025018 rdf:type owl:Class ;
                rdfs:label "geometric relational quality"@en ;
                skos:definition "Geometric relational quality is a relational quality describing the geometric relation between two or more independent continuants."@en ;
                skos:example "Elongation of a specimen after a tensile step, i.e., the specimen before and after the test. Angle between a rolling direction of a rolled material and the longitudinal side of a specimen."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025997
+co:PMD_0025997 rdf:type owl:Class ;
+               rdfs:subClassOf obo:OBI_0001931 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:OBI_0001927 ;
+                                 owl:someValuesFrom [ owl:intersectionOf ( co:PMD_0020101
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty co:PMD_0025999 ;
+                                                                             owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                                         owl:onProperty obo:BFO_0000050 ;
+                                                                                                                         owl:someValuesFrom obo:BFO_0000040
+                                                                                                                       ]
+                                                                                                                     ) ;
+                                                                                                  rdf:type owl:Class
+                                                                                                ]
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty obo:RO_0002350 ;
+                                 owl:allValuesFrom co:PMD_0020004
+                               ] ;
+               rdfs:label "fraction value specification"@en ;
+               skos:definition "Fraction value specification is a value specification that contains information about quantitative share of a part relative to a specified whole."@en ;
+               skos:example "2.05 wt.% of carbon in steel, 4 vol.% of nitric acid in a solution"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0040001
@@ -2863,6 +2999,7 @@ co:PMD_0060009 rdf:type owl:Class ;
 <https://w3id.org/pmd/imt/IMT_0000000> rdf:type owl:Class ;
                                        rdfs:subClassOf obo:IAO_0000030 ;
                                        rdfs:label "coordinate system"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
                                        skos:definition "Coordinate system is an information content entity which describes the geometry of an image."@en .
 
 
@@ -2914,7 +3051,7 @@ co:PMD_0060009 rdf:type owl:Class ;
                                        rdfs:subClassOf obo:IAO_0000100 ;
                                        obo:IAO_0000119 "https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5" ;
                                        rdfs:label "point correspondences"@en ;
-                                       skos:definition "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´."@en .
+                                       skos:definition "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate a correspondences for all other coordinates from s to s´."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000011
@@ -2964,7 +3101,8 @@ co:PMD_0060009 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/imt/IMT_0000015
 <https://w3id.org/pmd/imt/IMT_0000015> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000014> ;
-                                       rdfs:label "homography"@de .
+                                       rdfs:label "homography"@de ;
+                                       skos:definition "A homography is a transofrmation modle which is used for continuous mapping of a planar information content entity from one perspective to another."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000016
@@ -3050,6 +3188,28 @@ co:PMD_0060009 rdf:type owl:Class ;
                                                        ] ;
                                        rdfs:label "manually created point correspondences"@en ;
                                        skos:definition "Estimated point correspondences is a point correspondences data set which is an output of some manual point correspondences acquisition."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000021
+<https://w3id.org/pmd/imt/IMT_0000021> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ;
+                                       rdfs:label "inlier point correspondence"@en ;
+                                       skos:definition "Inliers point correspondences are point correspondence, containing contains points which correctly identify the same physical location in both images. Such inliers fit the underlying transformation model within a predefined margin of error."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000022
+<https://w3id.org/pmd/imt/IMT_0000022> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ;
+                                       rdfs:label "outlier point correspondence"@en ;
+                                       skos:definition "Outlier point correspondences are point correspondences, containing points which incorrectly identify the same physical location in both images, i.e., a point in a a source image is mistakenly matched to a different point in the target image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000024
+<https://w3id.org/pmd/imt/IMT_0000024> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000009 ;
+                                       obo:IAO_0000119 "https://en.wikipedia.org/wiki/Field_of_view" ;
+                                       rdfs:label "field of view"@en ;
+                                       skos:definition "A field of view (FOV) is the angular extent of the observable world that is seen at any given moment."@en .
 
 
 #################################################################

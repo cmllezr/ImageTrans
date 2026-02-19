@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                860c9fc641acd4a1558afd91ab33452167b6190d6eef1db6140616362a0a3988
+CONFIG_HASH=                36a4994c7b39fe11d5f984fff56b14922125dbc00d256e2284068c1f827cde24
 
 
 # ----------------------------------------
@@ -187,7 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  pmdco iao
+IMPORTS =  pmdco iao bfo ro
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -429,6 +429,18 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
 	@echo "       This rule needs to be overwritten in imt.Makefile!"
 	@false
 
+## Module for ontology: bfo (custom)
+$(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl
+	@echo "ERROR: You have configured bfo as a custom module;"
+	@echo "       This rule needs to be overwritten in imt.Makefile!"
+	@false
+
+## Module for ontology: ro (custom)
+$(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl
+	@echo "ERROR: You have configured ro as a custom module;"
+	@echo "       This rule needs to be overwritten in imt.Makefile!"
+	@false
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -522,6 +534,20 @@ mirror-pmdco: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/iao.owl
 mirror-iao: | $(TMPDIR)
 	$(ROBOT) convert -I https://raw.githubusercontent.com/information-artifact-ontology/IAO/refs/heads/master/iao.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: bfo
+.PHONY: mirror-bfo
+.PRECIOUS: $(MIRRORDIR)/bfo.owl
+mirror-bfo: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/BFO-ontology/BFO-2020/refs/heads/master/21838-2/owl/bfo-core.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ro
+.PHONY: mirror-ro
+.PRECIOUS: $(MIRRORDIR)/ro.owl
+mirror-ro: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/oborel/obo-relations/refs/heads/master/ro-base.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

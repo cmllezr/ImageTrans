@@ -14,11 +14,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/imt/imt-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-16/imt-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/imt/releases/2026-02-19/imt-simple.owl"/>
         <terms:description>None</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title>ImageTrans: Application-level ontology for image transformation</terms:title>
-        <owl:versionInfo>2026-02-16</owl:versionInfo>
+        <owl:versionInfo>2026-02-19</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1107,6 +1107,7 @@ RO&apos;s &apos;quality of&apos; is functional i.e., a-&gt;b, a-&gt;c =&gt; b=c.
         <owl:inverseOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000006"/>
         <rdfs:range rdf:resource="https://w3id.org/pmd/imt/IMT_0000000"/>
         <rdfs:label xml:lang="en">has coordinate system</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">has coordinate system is a realtion between a data item (1D, 2D, or 3D) and a coordinate system of this data item.</skos:definition>
     </owl:ObjectProperty>
     
@@ -1197,6 +1198,7 @@ image derived from is a relation between an warped image and an image, which is 
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000000">
         <rdfs:label xml:lang="en">coordinate system</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">Coordinate system is an information content entity which describes the geometry of an image.</skos:definition>
     </owl:Class>
     
@@ -1242,7 +1244,7 @@ image derived from is a relation between an warped image and an image, which is 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000005">
         <obo:IAO_0000119>https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5</obo:IAO_0000119>
         <rdfs:label xml:lang="en">point correspondences</rdfs:label>
-        <skos:definition xml:lang="en">Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´.</skos:definition>
+        <skos:definition xml:lang="en">Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate a correspondences for all other coordinates from s to s´.</skos:definition>
     </owl:Class>
     
 
@@ -1291,6 +1293,7 @@ image derived from is a relation between an warped image and an image, which is 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000015">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000014"/>
         <rdfs:label xml:lang="de">homography</rdfs:label>
+        <skos:definition xml:lang="en">A homography is a transofrmation modle which is used for continuous mapping of a planar information content entity from one perspective to another.</skos:definition>
     </owl:Class>
     
 
@@ -1364,6 +1367,36 @@ image derived from is a relation between an warped image and an image, which is 
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">manually created point correspondences</rdfs:label>
         <skos:definition xml:lang="en">Estimated point correspondences is a point correspondences data set which is an output of some manual point correspondences acquisition.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000021 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000021">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
+        <rdfs:label xml:lang="en">inlier point correspondence</rdfs:label>
+        <skos:definition xml:lang="en">Inliers point correspondences are point correspondence, containing contains points which correctly identify the same physical location in both images. Such inliers fit the underlying transformation model within a predefined margin of error.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000022 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000022">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
+        <rdfs:label xml:lang="en">outlier point correspondence</rdfs:label>
+        <skos:definition xml:lang="en">Outlier point correspondences are point correspondences, containing points which incorrectly identify the same physical location in both images, i.e., a point in a a source image is mistakenly matched to a different point in the target image.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/imt/IMT_0000024 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000024">
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Field_of_view</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">field of view</rdfs:label>
+        <skos:definition xml:lang="en">A field of view (FOV) is the angular extent of the observable world that is seen at any given moment.</skos:definition>
     </owl:Class>
 </rdf:RDF>
 

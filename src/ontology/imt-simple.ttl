@@ -14,11 +14,11 @@
 @base <https://w3id.org/pmd/imt/imt-simple.ttl> .
 
 <https://w3id.org/pmd/imt/imt-simple.ttl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-16/imt-simple.ttl> ;
+                                           owl:versionIRI <https://w3id.org/pmd/imt/releases/2026-02-19/imt-simple.ttl> ;
                                            terms:description "None" ;
                                            terms:license <https://creativecommons.org/licenses/unspecified> ;
                                            terms:title "ImageTrans: Application-level ontology for image transformation" ;
-                                           owl:versionInfo "2026-02-16" .
+                                           owl:versionInfo "2026-02-19" .
 
 #################################################################
 #    Annotation properties
@@ -836,6 +836,7 @@ RO's 'quality of' is functional i.e., a->b, a->c => b=c. The functionality is re
                                        owl:inverseOf <https://w3id.org/pmd/imt/IMT_0000006> ;
                                        rdfs:range <https://w3id.org/pmd/imt/IMT_0000000> ;
                                        rdfs:label "has coordinate system"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
                                        skos:definition "has coordinate system is a realtion between a data item (1D, 2D, or 3D) and a coordinate system of this data item."@en .
 
 
@@ -897,6 +898,7 @@ image derived from is a relation between an warped image and an image, which is 
 ###  https://w3id.org/pmd/imt/IMT_0000000
 <https://w3id.org/pmd/imt/IMT_0000000> rdf:type owl:Class ;
                                        rdfs:label "coordinate system"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
                                        skos:definition "Coordinate system is an information content entity which describes the geometry of an image."@en .
 
 
@@ -928,7 +930,7 @@ image derived from is a relation between an warped image and an image, which is 
 <https://w3id.org/pmd/imt/IMT_0000005> rdf:type owl:Class ;
                                        obo:IAO_0000119 "https://medium.com/all-things-about-robotics-and-computer-vision/homography-and-how-to-calculate-it-8abf3a13ddc5" ;
                                        rdfs:label "point correspondences"@en ;
-                                       skos:definition "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate correspondences for all other coordinates from s to s´."@en .
+                                       skos:definition "Point correspondences is data set which represent pairs of corresponding coordinates (x, y)  and (x´, y´) in two coordinate systems s and s´. The point correspondences are used to determine a mapping between s and s´ which can then be used to calculate a correspondences for all other coordinates from s to s´."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000011
@@ -960,7 +962,8 @@ image derived from is a relation between an warped image and an image, which is 
 ###  https://w3id.org/pmd/imt/IMT_0000015
 <https://w3id.org/pmd/imt/IMT_0000015> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000014> ;
-                                       rdfs:label "homography"@de .
+                                       rdfs:label "homography"@de ;
+                                       skos:definition "A homography is a transofrmation modle which is used for continuous mapping of a planar information content entity from one perspective to another."@en .
 
 
 ###  https://w3id.org/pmd/imt/IMT_0000016
@@ -1011,6 +1014,27 @@ image derived from is a relation between an warped image and an image, which is 
                                                        ] ;
                                        rdfs:label "manually created point correspondences"@en ;
                                        skos:definition "Estimated point correspondences is a point correspondences data set which is an output of some manual point correspondences acquisition."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000021
+<https://w3id.org/pmd/imt/IMT_0000021> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ;
+                                       rdfs:label "inlier point correspondence"@en ;
+                                       skos:definition "Inliers point correspondences are point correspondence, containing contains points which correctly identify the same physical location in both images. Such inliers fit the underlying transformation model within a predefined margin of error."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000022
+<https://w3id.org/pmd/imt/IMT_0000022> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/imt/IMT_0000005> ;
+                                       rdfs:label "outlier point correspondence"@en ;
+                                       skos:definition "Outlier point correspondences are point correspondences, containing points which incorrectly identify the same physical location in both images, i.e., a point in a a source image is mistakenly matched to a different point in the target image."@en .
+
+
+###  https://w3id.org/pmd/imt/IMT_0000024
+<https://w3id.org/pmd/imt/IMT_0000024> rdf:type owl:Class ;
+                                       obo:IAO_0000119 "https://en.wikipedia.org/wiki/Field_of_view" ;
+                                       rdfs:label "field of view"@en ;
+                                       skos:definition "A field of view (FOV) is the angular extent of the observable world that is seen at any given moment."@en .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
