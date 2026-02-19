@@ -275,6 +275,12 @@ obo:BFO_0000138 rdf:type owl:ObjectProperty ;
                 skos:example "As for occurrent part of."@en .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000210
+obo:BFO_0000210 rdf:type owl:ObjectProperty ;
+                rdfs:label "occupies spatial region"@en ;
+                skos:definition "b occupies spatial region r =Def b is an independent continuant that is not a spatial region & r is a spatial region & there is some time t such that every continuant part of b occupies some continuant part of r at t and no continuant part of b occupies any spatial region that is not a continuant part of r at t"@en .
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000039
 obo:IAO_0000039 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:BFO_0000051 ;
@@ -634,6 +640,13 @@ obo:RO_0002082 rdf:type owl:ObjectProperty ,
                obo:IAO_0000115 "x simultaneous with y iff ω(x) = ω(y) and ω(α ) = ω(α), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point and '=' indicates the same instance in time." ;
                rdfs:comment "t1 simultaneous_with t2 iff:=  t1 before_or_simultaneous_with t2  and not (t1 before t2)"@en ;
                rdfs:label "simultaneous with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002131
+obo:RO_0002131 rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               obo:IAO_0000115 "x overlaps y if and only if there exists some z such that x has part z and z part of y" ;
+               rdfs:label "overlaps"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002223

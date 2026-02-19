@@ -188,6 +188,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000117>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000118>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000132>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000138>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000210>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000039>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
@@ -222,6 +223,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001001>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001015>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001025>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002082>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002223>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002224>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002229>))
@@ -522,6 +524,11 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000138> <http://purl.ob
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000138>)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000138> <http://purl.obolibrary.org/obo/BFO_0000003>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000138> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000210> (occupies spatial region)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000210> "occupies spatial region"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <http://purl.obolibrary.org/obo/BFO_0000210> "b occupies spatial region r =Def b is an independent continuant that is not a spatial region & r is a spatial region & there is some time t such that every continuant part of b occupies some continuant part of r at t and no continuant part of b occupies any spatial region that is not a continuant part of r at t"@en)
 
 # Object Property: <http://purl.obolibrary.org/obo/IAO_0000039> (has measurement unit label)
 
@@ -882,6 +889,12 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0002082> "t1
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002082> "simultaneous with"@en)
 SymmetricObjectProperty(<http://purl.obolibrary.org/obo/RO_0002082>)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002082>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002131> (overlaps)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002131> "x overlaps y if and only if there exists some z such that x has part z and z part of y")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002131> "overlaps"@en)
+SymmetricObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002223> (starts)
 
