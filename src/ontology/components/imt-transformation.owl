@@ -144,7 +144,8 @@ image derived from is a relation between an warped image and an image, which is 
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:label xml:lang="de">transformation model</rdfs:label>
+        <rdfs:label xml:lang="en">transformation model</rdfs:label>
+        <skos:definition xml:lang="en">Transformation model is a universal geometric archetype selected to govern the relationship between two visual spaces. It is a specified input to a transformation model parametrization.</skos:definition>
     </owl:Class>
     
 
@@ -153,8 +154,8 @@ image derived from is a relation between an warped image and an image, which is 
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000015">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000014"/>
-        <rdfs:label xml:lang="de">homography</rdfs:label>
-        <skos:definition xml:lang="en">A homography is a transofrmation modle which is used for continuous mapping of a planar information content entity from one perspective to another.</skos:definition>
+        <rdfs:label xml:lang="en">homography</rdfs:label>
+        <skos:definition xml:lang="en">A homography is a transofrmation model which is used for continuous mapping of a planar information content entity from one perspective to another.</skos:definition>
     </owl:Class>
     
 
@@ -169,7 +170,7 @@ image derived from is a relation between an warped image and an image, which is 
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="de">transformation model parametrization</rdfs:label>
+        <rdfs:label xml:lang="en">transformation model parametrization</rdfs:label>
     </owl:Class>
     
 
@@ -178,23 +179,8 @@ image derived from is a relation between an warped image and an image, which is 
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000017">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000583"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/imt/IMT_0000005"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/IAO_0000101"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <obo:IAO_0000119>https://arxiv.org/pdf/2505.16599</obo:IAO_0000119>
-        <rdfs:label xml:lang="de">point correspondences acquisition</rdfs:label>
+        <rdfs:label xml:lang="en">point correspondences acquisition</rdfs:label>
         <skos:definition xml:lang="en">Point correspondences acquisition is a computing process which has two images with different imaging scenes as specified inputs and a point correspondences data set as a specified output. It includes expatraction and matching of the points from the images, as well as removal of outlier points.</skos:definition>
     </owl:Class>
     
@@ -203,11 +189,10 @@ image derived from is a relation between an warped image and an image, which is 
     <!-- https://w3id.org/pmd/imt/IMT_0000018 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/imt/IMT_0000018">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000594"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/imt/IMT_0000017"/>
-        <rdfs:label xml:lang="de">deep-learning point correspondences acquisition</rdfs:label>
-        <skos:altLabel>automated point correspondences acquisition</skos:altLabel>
-        <skos:definition xml:lang="en">Deep-learning point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using neural networks, which map points from one image to another.</skos:definition>
+        <rdfs:label xml:lang="en">computational point correspondences acquisition</rdfs:label>
+        <skos:altLabel xml:lang="en">automated point correspondences acquisition</skos:altLabel>
+        <skos:definition xml:lang="en">Computational point correspondences acquisition is point correspondences acquisition, where the estimation of point correspondences data set is perfomed using SIFT, neural networks, etc. which map points from one image to another.</skos:definition>
     </owl:Class>
     
 
