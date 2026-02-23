@@ -16,7 +16,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/pmdco.ttl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/co/releases/2026-02-19/pmdco.ttl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/co/releases/2026-02-20/pmdco.ttl"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-6772-1943"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-1058-3102"/>
@@ -43,7 +43,7 @@ Documentation: https://materialdigital.github.io/core-ontology/docs/</dcterms:de
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title>PMD Core Ontology</dcterms:title>
         <doap:repository rdf:resource="https://github.com/materialdigital/core-ontology"/>
-        <owl:versionInfo>2026-02-19</owl:versionInfo>
+        <owl:versionInfo>2026-02-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -163,6 +163,17 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000119 xml:lang="en">Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">The &apos;tracker item&apos; can associate a tracker with a specific ontology term.</rdfs:comment>
         <rdfs:label xml:lang="en">term tracker item</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
+        <obo:IAO_0000115 xml:lang="en">Use on obsolete terms, relating the term to another term that can be used as a substitute</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">Add as annotation triples in the granting ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">term replaced by</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -1736,6 +1747,17 @@ RO&apos;s &apos;quality of&apos; is functional i.e., a-&gt;b, a-&gt;c =&gt; b=c.
         <obo:IAO_0000116>This is not an RDF/OWL object property. It is intended to link a value found in e.g. a database column of &apos;M&apos; (the literal) to an instance of a value specification class, which can then be linked to indicate that this is about the biological gender of a human subject.</obo:IAO_0000116>
         <obo:IAO_0000119>OBI</obo:IAO_0000119>
         <rdfs:label xml:lang="en">has specified value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime">
+        <rdfs:label xml:lang="es">en fecha-tiempo XSD</rdfs:label>
+        <rdfs:label xml:lang="en">in XSD Date-Time</rdfs:label>
+        <skos:definition xml:lang="es">Posición de un instante, expresado utilizando xsd:dateTime.</skos:definition>
+        <skos:definition xml:lang="en">Position of an instant, expressed using xsd:dateTime</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -5540,7 +5562,6 @@ https://github.com/pyiron/semantikon/pull/278</pmd:PMD_0001032>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000002"/>
         <obo:IAO_0000116 xml:lang="en">Classified by morphology.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">ceramic</rdfs:label>
-        <rdfs:label>ceramic</rdfs:label>
         <skos:definition xml:lang="en">Ceramics are engineered materials described as non-metallic, inorganic materials characterized by high hardness, brittleness, and heat resistance, commonly used in engineering applications.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
@@ -5973,8 +5994,8 @@ See the pattern example of composition to underatand the difference between comp
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">composite</rdfs:label>
         <rdfs:label xml:lang="en">composite material</rdfs:label>
-        <rdfs:label>composite</rdfs:label>
         <skos:definition xml:lang="en">A composite material is an engineered material that &apos;consists of&apos; some material that has a matrix role and of some material that has a filler role.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
@@ -6720,18 +6741,15 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     <!-- https://w3id.org/pmd/co/PMD_0000639 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000639">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000852"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020026"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">ferrous alloy</rdfs:label>
-        <rdfs:label>ferrous metal</rdfs:label>
-        <skos:definition xml:lang="en">A ferrous alloy is a metal describing an alloy containing iron as its principal element, often combined with other elements for enhanced properties.</skos:definition>
-        <skos:definition>metal that has iron as primary constituent</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <rdfs:label xml:lang="en">ferrous metal</rdfs:label>
+        <skos:definition xml:lang="en">metal that has iron as primary constituent</skos:definition>
     </owl:Class>
     
 
@@ -7018,7 +7036,6 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
         <obo:IAO_0000116 xml:lang="en">Classified by morphology.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">It is often composed of silica-based compounds.</rdfs:comment>
         <rdfs:label xml:lang="en">glass</rdfs:label>
-        <rdfs:label>glass</rdfs:label>
         <skos:definition xml:lang="en">A glass is an engineered material present as an amorphous solid typically formed by rapid cooling of a melt.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
@@ -8174,7 +8191,6 @@ A manufacturing process is always a transformative process.</skos:definition>
         </rdfs:subClassOf>
         <obo:IAO_0000116 xml:lang="en">Classified by morphology.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">metal</rdfs:label>
-        <rdfs:label>metal</rdfs:label>
         <skos:definition xml:lang="en">A metal is an engineered material representing a class of materials characterized by high electrical and thermal conductivity, ductility, and metallic bonding.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
@@ -8500,7 +8516,7 @@ A manufacturing process is always a transformative process.</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000002"/>
         <obo:IAO_0000116 xml:lang="en">Classified by morphology.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">polymer</rdfs:label>
-        <rdfs:label>polymere</rdfs:label>
+        <rdfs:label xml:lang="en">polymere</rdfs:label>
         <skos:definition xml:lang="en">A polymer is an engineered material that consists of many repeated subunits (monomers) to form long chains. The atoms within a polymer chain are bonded together by covalent bonds. The intermolecular forces between polymer chains are typically represented by van der waals forces and hydrogen bonds.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
@@ -10287,6 +10303,7 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">corrosion resistant</rdfs:label>
         <rdfs:label>corrosion resistant</rdfs:label>
         <skos:definition>a disposition to withstand corrosive attack to a certain extend</skos:definition>
     </owl:Class>
@@ -10303,8 +10320,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020030"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>carbon steel</rdfs:label>
-        <skos:definition>ferrous metal that has a limited amout of carbon</skos:definition>
+        <rdfs:label xml:lang="en">carbon steel</rdfs:label>
+        <skos:definition xml:lang="en">ferrous metal that has a limited amout of carbon</skos:definition>
     </owl:Class>
     
 
@@ -10313,8 +10330,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010002">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000639"/>
-        <rdfs:label>cast iron</rdfs:label>
-        <skos:definition>ferrous metal that has an amout of min 2.07 wt % carbon </skos:definition>
+        <rdfs:label xml:lang="en">cast iron</rdfs:label>
+        <skos:definition xml:lang="en">ferrous metal that has an amout of min 2.07 wt % carbon</skos:definition>
     </owl:Class>
     
 
@@ -10325,20 +10342,12 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020096"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020029"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0010000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>chromium steel</rdfs:label>
-        <rdfs:label>stainless steel</rdfs:label>
-        <skos:definition>chromium steel is the name for any one of a class of non-stainless steels which are used for applications such as bearings, tools, drills and utensils. Such as stainless steel, chromium steels contain chromium, but do not have the corrosion-resistant properties of stainless steel.</skos:definition>
-        <skos:definition>stainless steel is an iron-based alloy that contains chromium, making it resistant to corrosion (rust).</skos:definition>
+        <rdfs:label xml:lang="en">stainless steel</rdfs:label>
+        <skos:definition xml:lang="en">stainless steel is an iron-based alloy that contains chromium, making it resistant to corrosion (rust).</skos:definition>
     </owl:Class>
     
 
@@ -10353,8 +10362,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0010013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>tool steel</rdfs:label>
-        <skos:definition>steel with tailored mechanical properties</skos:definition>
+        <rdfs:label xml:lang="en">tool steel</rdfs:label>
+        <skos:definition xml:lang="en">steel with tailored mechanical properties</skos:definition>
     </owl:Class>
     
 
@@ -10363,8 +10372,24 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010005">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020096"/>
-        <rdfs:label>alloy steel</rdfs:label>
-        <skos:definition>alloy steel is steel that is alloyed with a variety of elements in amounts between 1.0% and 50% by weight, typically to improve its mechanical properties.</skos:definition>
+        <rdfs:label xml:lang="en">alloy steel</rdfs:label>
+        <skos:definition xml:lang="en">alloy steel is steel that is alloyed with a variety of elements in amounts between 1.0% and 50% by weight, typically to improve its mechanical properties.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0010006 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010006">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020096"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020029"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">chromium steel</rdfs:label>
+        <skos:definition xml:lang="en">chromium steel is the name for any one of a class of non-stainless steels which are used for applications such as bearings, tools, drills and utensils. Such as stainless steel, chromium steels contain chromium, but do not have the corrosion-resistant properties of stainless steel.</skos:definition>
     </owl:Class>
     
 
@@ -10373,76 +10398,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010007">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000852"/>
-        <rdfs:label>non-ferrous metal</rdfs:label>
-        <skos:definition>non-ferrous metals are metals or alloys that do not contain iron (allotropes of iron, ferrite, and so on) in appreciable amounts.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0010008 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010008">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020071"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>aluminium alloy</rdfs:label>
-        <skos:definition>non-ferrous metal consisting primarily of aluminium mixed with other elements </skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0010009 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010009">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020054"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>copper alloy</rdfs:label>
-        <skos:definition>non-ferrous metal consisting primarily of copper combined with other elements</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0010010 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010010">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020095"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>titanium alloy</rdfs:label>
-        <skos:definition>non-ferrous metal consisting primarily of titanium combined with other elements</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0010011 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010011">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020051"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>nickel alloy</rdfs:label>
-        <skos:definition>non-ferrous metal consisting primarily of nickel combined with other elements</skos:definition>
+        <rdfs:label xml:lang="en">non-ferrous metal</rdfs:label>
+        <skos:definition xml:lang="en">non-ferrous metals are metals or alloys that do not contain iron (allotropes of iron, ferrite, and so on) in appreciable amounts.</skos:definition>
     </owl:Class>
     
 
@@ -10458,8 +10415,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020068"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>zinc alloy</rdfs:label>
-        <skos:definition>non-ferrous metal consisting primarily of zinc combined with other elements</skos:definition>
+        <rdfs:label xml:lang="en">zinc alloy</rdfs:label>
+        <skos:definition xml:lang="en">non-ferrous metal consisting primarily of zinc combined with other elements</skos:definition>
     </owl:Class>
     
 
@@ -10468,6 +10425,7 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">hardenable</rdfs:label>
         <rdfs:label>hardenable</rdfs:label>
         <skos:definition>a disposition to gain a greatly increased hardness at the surface or entire volume by the process of hardening</skos:definition>
     </owl:Class>
@@ -10478,8 +10436,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010014">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000852"/>
-        <rdfs:label>precious metal</rdfs:label>
-        <skos:definition>metal that are rare, naturally occurring, and have high economic value due to their resistance to corrosion, oxidation, and chemical reaction</skos:definition>
+        <rdfs:label xml:lang="en">precious metal</rdfs:label>
+        <skos:definition xml:lang="en">metal that are rare, naturally occurring, and have high economic value due to their resistance to corrosion, oxidation, and chemical reaction</skos:definition>
     </owl:Class>
     
 
@@ -10494,8 +10452,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>gold metal</rdfs:label>
-        <skos:definition>precious metal consisting primarily of gold</skos:definition>
+        <rdfs:label xml:lang="en">gold metal</rdfs:label>
+        <skos:definition xml:lang="en">precious metal consisting primarily of gold</skos:definition>
     </owl:Class>
     
 
@@ -10510,8 +10468,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020076"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>silver metal</rdfs:label>
-        <skos:definition>precious metal consisting primarily of silver</skos:definition>
+        <rdfs:label xml:lang="en">silver metal</rdfs:label>
+        <skos:definition xml:lang="en">precious metal consisting primarily of silver</skos:definition>
     </owl:Class>
     
 
@@ -10526,8 +10484,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020057"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>platinum metal</rdfs:label>
-        <skos:definition>precious metal consisting primarily of platinum</skos:definition>
+        <rdfs:label xml:lang="en">platinum metal</rdfs:label>
+        <skos:definition xml:lang="en">precious metal consisting primarily of platinum</skos:definition>
     </owl:Class>
     
 
@@ -10542,8 +10500,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020092"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>palladium metal</rdfs:label>
-        <skos:definition>precious metal consisting primarily of palladium</skos:definition>
+        <rdfs:label xml:lang="en">palladium metal</rdfs:label>
+        <skos:definition xml:lang="en">precious metal consisting primarily of palladium</skos:definition>
     </owl:Class>
     
 
@@ -10558,8 +10516,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0010020"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>rhodium metal</rdfs:label>
-        <skos:definition>precious metal consisting primarily of rhodium</skos:definition>
+        <rdfs:label xml:lang="en">rhodium metal</rdfs:label>
+        <skos:definition xml:lang="en">precious metal consisting primarily of rhodium</skos:definition>
     </owl:Class>
     
 
@@ -10581,7 +10539,6 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020140"/>
         <rdfs:comment xml:lang="en">A Portion Of Matter that consists of only rhodium atoms.</rdfs:comment>
         <rdfs:label xml:lang="en">portion of rhodium</rdfs:label>
-        <rdfs:label>portion of rhodium</rdfs:label>
         <skos:definition xml:lang="en">A &apos;Portion Of Rhodium&apos; is a &apos;Portion Of Pure Substance&apos; that &apos;consists of&apos; only chebi:rhodium atom.</skos:definition>
     </owl:Class>
     
@@ -10604,7 +10561,6 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020140"/>
         <rdfs:comment xml:lang="en">A Portion Of Matter that consists of only tellurium atoms.</rdfs:comment>
         <rdfs:label xml:lang="en">portion of tellurium</rdfs:label>
-        <rdfs:label>portion of tellurium</rdfs:label>
         <skos:definition xml:lang="en">A &apos;Portion Of Tellurium&apos; is a &apos;Portion Of Pure Substance&apos; that &apos;consists of&apos; only chebi:tellurium atom.</skos:definition>
     </owl:Class>
     
@@ -10614,6 +10570,7 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010022">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">containing magnetic species</rdfs:label>
         <rdfs:label>containing magnetic species</rdfs:label>
         <skos:definition xml:lang="en">A disposition that inheres in a material entity in virtue of the presence of one or more magnetic species (e.g. ferromagnetic, paramagnetic, or diamagnetic particles or atoms), and that manifests under appropriate conditions as the ability of that material entity to exhibit a magnetic response or influence in a magnetic field.</skos:definition>
     </owl:Class>
@@ -10624,8 +10581,25 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">bioactive</rdfs:label>
         <rdfs:label>bioactive</rdfs:label>
         <skos:definition xml:lang="en">A disposition that inheres in a material entity and is realized in an organismal context as a specific interaction with one or more biological systems, producing a measurable biological effect (e.g., therapeutic, toxic, or signaling outcome).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0010024 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010024">
+        <rdfs:label xml:lang="en">bioinert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0010025 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0010025">
+        <rdfs:label xml:lang="en">bioresorbable</rdfs:label>
     </owl:Class>
     
 
@@ -10646,8 +10620,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020249"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>oxide ceramic</rdfs:label>
-        <skos:definition>ceramic consisting primarily of metal oxide</skos:definition>
+        <rdfs:label xml:lang="en">oxide ceramic</rdfs:label>
+        <skos:definition xml:lang="en">ceramic consisting primarily of metal oxide</skos:definition>
     </owl:Class>
     
 
@@ -10662,8 +10636,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020071"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>alumina</rdfs:label>
-        <skos:definition>oxide ceramic consisting primarily of aluminium oxide</skos:definition>
+        <rdfs:label xml:lang="en">alumina</rdfs:label>
+        <skos:definition xml:lang="en">oxide ceramic consisting primarily of aluminium oxide</skos:definition>
     </owl:Class>
     
 
@@ -10678,8 +10652,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020053"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>zirconia</rdfs:label>
-        <skos:definition>oxide ceramic consisting primarily of zirconium oxide</skos:definition>
+        <rdfs:label xml:lang="en">zirconia</rdfs:label>
+        <skos:definition xml:lang="en">oxide ceramic consisting primarily of zirconium oxide</skos:definition>
     </owl:Class>
     
 
@@ -10694,8 +10668,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>silica</rdfs:label>
-        <skos:definition>oxide ceramic consisting primarily of silicon oxide</skos:definition>
+        <rdfs:label xml:lang="en">silica</rdfs:label>
+        <skos:definition xml:lang="en">oxide ceramic consisting primarily of silicon oxide</skos:definition>
     </owl:Class>
     
 
@@ -10710,8 +10684,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020067"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>magnesia</rdfs:label>
-        <skos:definition>oxide ceramic consisting primarily of magnesium oxide</skos:definition>
+        <rdfs:label xml:lang="en">magnesia</rdfs:label>
+        <skos:definition xml:lang="en">oxide ceramic consisting primarily of magnesium oxide</skos:definition>
     </owl:Class>
     
 
@@ -10726,8 +10700,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020249"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>non-oxide ceramic</rdfs:label>
-        <skos:definition>ceramic consisting primarily of non-oxide elements</skos:definition>
+        <rdfs:label xml:lang="en">non-oxide ceramic</rdfs:label>
+        <skos:definition xml:lang="en">ceramic consisting primarily of non-oxide elements</skos:definition>
     </owl:Class>
     
 
@@ -10742,8 +10716,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020030"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>carbide</rdfs:label>
-        <skos:definition>non-oxide ceramic consisting of a metal and carbon</skos:definition>
+        <rdfs:label xml:lang="en">carbide</rdfs:label>
+        <skos:definition xml:lang="en">non-oxide ceramic consisting of a metal and carbon</skos:definition>
     </owl:Class>
     
 
@@ -10758,8 +10732,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>silicon carbide</rdfs:label>
-        <skos:definition>carbide with silicon</skos:definition>
+        <rdfs:label xml:lang="en">silicon carbide</rdfs:label>
+        <skos:definition xml:lang="en">carbide with silicon</skos:definition>
     </owl:Class>
     
 
@@ -10774,8 +10748,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020032"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>tungsten carbide</rdfs:label>
-        <skos:definition>carbide with tungsten</skos:definition>
+        <rdfs:label xml:lang="en">tungsten carbide</rdfs:label>
+        <skos:definition xml:lang="en">carbide with tungsten</skos:definition>
     </owl:Class>
     
 
@@ -10790,8 +10764,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020038"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>nitride</rdfs:label>
-        <skos:definition>non-oxide ceramic consisting of a metal and nitrogen</skos:definition>
+        <rdfs:label xml:lang="en">nitride</rdfs:label>
+        <skos:definition xml:lang="en">non-oxide ceramic consisting of a metal and nitrogen</skos:definition>
     </owl:Class>
     
 
@@ -10806,8 +10780,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>silicon nitride</rdfs:label>
-        <skos:definition>nitritde with silicon</skos:definition>
+        <rdfs:label xml:lang="en">silicon nitride</rdfs:label>
+        <skos:definition xml:lang="en">nitritde with silicon</skos:definition>
     </owl:Class>
     
 
@@ -10822,8 +10796,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020048"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>boron nitride</rdfs:label>
-        <skos:definition>nitritde with boron</skos:definition>
+        <rdfs:label xml:lang="en">boron nitride</rdfs:label>
+        <skos:definition xml:lang="en">nitritde with boron</skos:definition>
     </owl:Class>
     
 
@@ -10838,8 +10812,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020048"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>boride</rdfs:label>
-        <skos:definition>non-oxide ceramic consisting of a boron and another element</skos:definition>
+        <rdfs:label xml:lang="en">boride</rdfs:label>
+        <skos:definition xml:lang="en">non-oxide ceramic consisting of a boron and another element</skos:definition>
     </owl:Class>
     
 
@@ -10854,8 +10828,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>silicide</rdfs:label>
-        <skos:definition>non-oxide ceramic consisting of a silicon and another element</skos:definition>
+        <rdfs:label xml:lang="en">silicide</rdfs:label>
+        <skos:definition xml:lang="en">non-oxide ceramic consisting of a silicon and another element</skos:definition>
     </owl:Class>
     
 
@@ -10863,43 +10837,80 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
     <!-- https://w3id.org/pmd/co/PMD_0011033 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0011033">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000546"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000000"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000000"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000000"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000000"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000546"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000000"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>composite ceramic</rdfs:label>
-        <skos:definition>a composite with at least part being a ceramic material</skos:definition>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000000"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">composite ceramic</rdfs:label>
+        <skos:definition xml:lang="en">a composite with at least part being a ceramic material</skos:definition>
     </owl:Class>
     
 
@@ -10942,8 +10953,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label>cermet</rdfs:label>
-        <skos:definition>a metal matrix with ceramic filler</skos:definition>
+        <rdfs:label xml:lang="en">cermet</rdfs:label>
+        <skos:definition xml:lang="en">a metal matrix with ceramic filler</skos:definition>
     </owl:Class>
     
 
@@ -10986,96 +10997,8 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label>ceramic matrix composite</rdfs:label>
-        <skos:definition>a ceramic matrix with a (metal) filler</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0011036 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0011036">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0011033"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000661"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:label>porcelain</rdfs:label>
-        <skos:definition>a glass binder with ceramic filler produced from ceramics</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0011037 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0011037">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0011033"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000661"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:label>glass-ceramic</rdfs:label>
-        <skos:definition>a glass binder with ceramic filler produced from glass</skos:definition>
+        <rdfs:label xml:lang="en">ceramic matrix composite</rdfs:label>
+        <skos:definition xml:lang="en">a ceramic matrix with a (metal) filler</skos:definition>
     </owl:Class>
     
 
@@ -12787,9 +12710,7 @@ To understand the difference between the composition and the composition data it
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">steel</rdfs:label>
-        <rdfs:label>steel</rdfs:label>
-        <skos:definition xml:lang="en">Steel is a ferrous alloy that consists of iron and carbon and possibly other alloying elements (and possibly impurities).</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <skos:definition xml:lang="en">steel is a ferrous metal that consists of iron and carbon and possibly other alloying elements (and possibly impurities).</skos:definition>
     </owl:Class>
     
 
@@ -13689,6 +13610,7 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
     <!-- https://w3id.org/pmd/co/PMD_0020186 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020186">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -13696,8 +13618,8 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020071"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">aluminum alloy</rdfs:label>
-        <skos:definition xml:lang="en">An aluminum alloy is an alloy that contains signifcant amounts of aluminum.</skos:definition>
+        <rdfs:label xml:lang="en">aluminium alloy</rdfs:label>
+        <skos:definition xml:lang="en">non-ferrous metal consisting primarily of aluminium mixed with other elements</skos:definition>
     </owl:Class>
     
 
@@ -13705,6 +13627,7 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
     <!-- https://w3id.org/pmd/co/PMD_0020187 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020187">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -13713,7 +13636,7 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">copper alloy</rdfs:label>
-        <skos:definition xml:lang="en">A copper alloy is an alloy that contains signifcant amounts of copper.</skos:definition>
+        <skos:definition xml:lang="en">non-ferrous metal consisting primarily of copper combined with other elements</skos:definition>
     </owl:Class>
     
 
@@ -13721,6 +13644,7 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
     <!-- https://w3id.org/pmd/co/PMD_0020188 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020188">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -13729,7 +13653,7 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">nickel alloy</rdfs:label>
-        <skos:definition xml:lang="en">A nickel alloy is an alloy that contains signifcant amounts of nickel.</skos:definition>
+        <skos:definition xml:lang="en">non-ferrous metal consisting primarily of nickel combined with other elements</skos:definition>
     </owl:Class>
     
 
@@ -13737,6 +13661,7 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
     <!-- https://w3id.org/pmd/co/PMD_0020189 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020189">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0010007"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -13745,7 +13670,7 @@ The phase boundary between Fe3C and Fe of a pearlite lamellae.</skos:example>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">titanium alloy</rdfs:label>
-        <skos:definition xml:lang="en">A titanium alloy is an alloy that contains signifcant amounts of titanium.</skos:definition>
+        <skos:definition xml:lang="en">non-ferrous metal consisting primarily of titanium combined with other elements</skos:definition>
     </owl:Class>
     
 
@@ -14746,7 +14671,6 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ceramic crystal</rdfs:label>
-        <rdfs:label>ceramic crystal</rdfs:label>
         <skos:definition xml:lang="en">a crystal whose atomic entities have a ionic or a covalent bond</skos:definition>
     </owl:Class>
     
@@ -14773,7 +14697,6 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">alloy crystal</rdfs:label>
-        <rdfs:label>alloy crystal</rdfs:label>
         <skos:definition xml:lang="en">a crystal whose atomic entities have a metallic bond</skos:definition>
     </owl:Class>
     
@@ -14868,10 +14791,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">alloy</rdfs:label>
-        <rdfs:label>alloy</rdfs:label>
-        <skos:definition xml:lang="en">An alloy is a material containing any metallic element as its principal element, often combined with other elements for enhanced properties.</skos:definition>
-        <skos:definition>a metallic alloy is a mixture of chemical elements of which at least one is a metallic element</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <skos:definition xml:lang="en">a metallic alloy is a mixture of chemical elements of which at least one is a metallic element</skos:definition>
     </owl:Class>
     
 
@@ -15235,6 +15155,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050004"/>
         <rdfs:label xml:lang="en">polyethylene</rdfs:label>
         <skos:definition xml:lang="en">Polyethylene is a thermoplastic that is composed of repeating ethylene monomer units.</skos:definition>
+        <skos:definition xml:lang="en">poylethylen also polyethene is a thermoplastic polymer produced by polymerization of the monomer ethylene including further crosslinking and modifications using other comonomers. This excludes ultra hight molecular polyethylen because very high molecular weight polyethylene is not thermoplastic anymore</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
         <pmd:PMD_0050117>PE</pmd:PMD_0050117>
     </owl:Class>
@@ -15283,6 +15204,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050004"/>
         <rdfs:label xml:lang="en">polypropylene</rdfs:label>
         <skos:definition xml:lang="en">Polypropylene is a thermoplastic that is composed of repeating propylene monomer units.</skos:definition>
+        <skos:definition xml:lang="en">poylpropylene also polyethene is a thermoplastic polymer produced by polymerization of the monomer propylene including further crosslinking and modifications using other comonomers</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
         <pmd:PMD_0050117>PP</pmd:PMD_0050117>
     </owl:Class>
@@ -15331,6 +15253,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050004"/>
         <rdfs:label xml:lang="en">polyvinyl chloride</rdfs:label>
         <skos:definition xml:lang="en">Polyvinyl chloride is a thermoplastic that is formed by the polymerization of vinyl chloride monomers.</skos:definition>
+        <skos:definition xml:lang="en">polyvinyl chloride also vinyl or polyvinyl is a thermoplastic polymer produced by polymerization of the monomer vinyl chloride. poylvinyl is usualy hard or soft and flexible with incrased use of plasticisers</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
         <pmd:PMD_0050117>PVC</pmd:PMD_0050117>
     </owl:Class>
@@ -15367,6 +15290,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050004"/>
         <rdfs:label xml:lang="en">polystyrene</rdfs:label>
         <skos:definition xml:lang="en">Polystyrene is a thermoplastic that is produced by the polymerization of styrene monomers.</skos:definition>
+        <skos:definition xml:lang="en">polystyrene is a thermoplastic polymer produced by polymerization of the monomer aromatic hydrocarbon</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
         <pmd:PMD_0050117>PS</pmd:PMD_0050117>
     </owl:Class>
@@ -15400,6 +15324,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050019">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050004"/>
         <rdfs:label xml:lang="en">polyethylene terephthalate</rdfs:label>
+        <skos:definition xml:lang="en">Polyethylene terephthalate is a thermoplastic polyester produced by polycondensation of ethylene glycol with terephthalate precursors; it is the dominant polyester utilized in global packaging and fiber applications</skos:definition>
         <skos:definition xml:lang="en">Polyethylene terephthalate is a thermoplastic that is synthesized from terephthalic acid and ethylene glycol.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
         <pmd:PMD_0050117>PET</pmd:PMD_0050117>
@@ -15448,6 +15373,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050022"/>
         <rdfs:label xml:lang="en">epoxy resins</rdfs:label>
         <skos:definition xml:lang="en">Epoxy resins are thermosetting polymers that form rigid, cross-linked networks upon curing.</skos:definition>
+        <skos:definition xml:lang="en">Epoxy resins, also epoxy or polyepoxide, are epoxide-functional oligomers curing via ring-opening into crosslinked thermoset networks; utilized for high-performance structural adhesives, composite matrices, and protective coatings.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -15481,6 +15407,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050022"/>
         <rdfs:label xml:lang="en">phenolic resins</rdfs:label>
         <skos:definition xml:lang="en">Phenolic resins are thermosetting polymers formed by the reaction of phenol with formaldehyde.</skos:definition>
+        <skos:definition xml:lang="en">Phenolic resins, also phenol-formaldehyde, are thermosetting polymers synthesized via condensation of phenol and formaldehyde; they form rigid, char-forming crosslinked networks utilized for flame-resistant adhesives, friction materials, and molded components</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -15503,6 +15430,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050022"/>
         <rdfs:label xml:lang="en">melamine formaldehyde</rdfs:label>
         <skos:definition xml:lang="en">Melamine formaldehyde is a thermosetting polymer produced from melamine and formaldehyde, known for its high hardness.</skos:definition>
+        <skos:definition xml:lang="en">Melamine resin, also melamine-formaldehyde, is a thermosetting aminoplast polymer synthesized via condensation; it forms hard, durable crosslinked networks widely used in decorative laminates, kitchenware, and coating crosslinkers.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -15536,6 +15464,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050030"/>
         <rdfs:label xml:lang="en">natural rubber</rdfs:label>
         <skos:definition xml:lang="en">Natural rubber is an elastomer that is derived from the latex of rubber trees.</skos:definition>
+        <skos:definition xml:lang="en">Natural rubber, predominantly cis-1,4-polyisoprene, is an elastomer and biopolymer harvested as plant latex; typically vulcanized for high resilience and strain-induced crystallization widely used in heavy-duty tires and vibration-isolating components</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -15558,6 +15487,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050032"/>
         <rdfs:label xml:lang="en">styrene-butadiene rubber</rdfs:label>
         <skos:definition xml:lang="en">Styrene-Butadiene rubber is a synthetic rubber that is composed of styrene and butadiene to enhance abrasion resistance.</skos:definition>
+        <skos:definition xml:lang="en">Styrene–butadiene rubber (SBR) is a family of synthetic random copolymer elastomers of styrene and butadiene, made by emulsion or solution polymerization and typically vulcanized; used widely for its good abrasion resistance and tunable hardness, for instance in tire treads.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -15568,7 +15498,9 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050034">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050032"/>
         <rdfs:label xml:lang="en">nitrile butadiene rubber</rdfs:label>
+        <rdfs:label xml:lang="en">nitrile butadiene rubber&apos;</rdfs:label>
         <skos:definition xml:lang="en">Nitrile butadiene rubber is a synthetic rubber that is formulated from acrylonitrile and butadiene to provide resistance to oils and chemicals.</skos:definition>
+        <skos:definition xml:lang="en">nitrile butadiene rubber, also Nitrile rubber is a family of synthetic acrylonitrile–butadiene copolymer elastomers; with tunable polarity and oil/fuel resistance, and it is widely used in seals, fuel hoses, and protective gloves</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -15706,9 +15638,45 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     <!-- https://w3id.org/pmd/co/PMD_0050045 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050045">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0011033"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050042"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000661"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">porcelain</rdfs:label>
         <skos:definition xml:lang="en">Porcelain is a clay-based ceramic that is distinguished by its translucency, strength, and refined appearance.</skos:definition>
+        <skos:definition xml:lang="en">a glass binder with ceramic filler produced from ceramics</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -15761,19 +15729,53 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     <!-- https://w3id.org/pmd/co/PMD_0050050 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050050">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0011033"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050049"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050122"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000591"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020001"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000661"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000845"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000591"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">glass-ceramics</rdfs:label>
-        <rdfs:label>glass-ceramics</rdfs:label>
-        <skos:definition xml:lang="en">Glass-Ceramics are non-clay ceramics that are produced by controlled crystallization of glass, combining properties of both glass and ceramics.</skos:definition>
-        <skos:definition>Glass‑ceramics are inorganic, non‑metallic materials prepared by controlled crystallization of glasses via different processing methods; they contain at least one type of functional crystalline phase and a residual glass, and the crystallized volume fraction may vary from ppm to almost 100%.</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <rdfs:label xml:lang="en">glass-ceramic</rdfs:label>
+        <skos:definition xml:lang="en">Glass‑ceramics are inorganic, non‑metallic materials prepared by controlled crystallization of glasses via different processing methods; they contain at least one type of functional crystalline phase and a residual glass, and the crystallized volume fraction may vary from ppm to almost 100%.</skos:definition>
     </owl:Class>
     
 
@@ -16240,7 +16242,41 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     <!-- https://w3id.org/pmd/co/PMD_0050091 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050091">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0010023"/>
+                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0010024"/>
+                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0010025"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000546"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0010023"/>
+                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0010024"/>
+                            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0010025"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">bioceramic</rdfs:label>
         <rdfs:label xml:lang="en">bioceramics</rdfs:label>
         <skos:definition xml:lang="en">Bioceramics are ceramics that are engineered to be compatible with biological systems.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
@@ -16284,7 +16320,25 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     <!-- https://w3id.org/pmd/co/PMD_0050095 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050095">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0010023"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050091"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0010023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">bioactive ceramic</rdfs:label>
         <rdfs:label xml:lang="en">bioactive ceramics</rdfs:label>
         <skos:definition xml:lang="en">Bioactive ceramics are bioceramics that interact with biological tissues to promote bonding or regeneration.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
@@ -16317,7 +16371,25 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     <!-- https://w3id.org/pmd/co/PMD_0050098 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050098">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0010025"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050091"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0010025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">bioresorbable ceramic</rdfs:label>
         <rdfs:label xml:lang="en">bioresorbable ceramics</rdfs:label>
         <skos:definition xml:lang="en">Bioresorbable ceramics are bioceramics that are designed to gradually be resorbed and replaced by natural tissue.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
@@ -16351,11 +16423,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050101">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
-        <rdfs:label xml:lang="en">silicate glasses</rdfs:label>
-        <rdfs:label>silicate glass</rdfs:label>
-        <skos:definition xml:lang="en">Silicate glasses are glasses that are composed primarily of silica.</skos:definition>
-        <skos:definition>Silicate glasses are glasses whose network is based primarily on silica (SiO₂), typically with additional components (e.g., alumina, soda, lime, boron oxide, etc.) added to tailor properties.</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <rdfs:label xml:lang="en">silicate glass</rdfs:label>
+        <skos:definition xml:lang="en">Silicate glasses are glasses whose network is based primarily on silica (SiO₂), typically with additional components (e.g., alumina, soda, lime, boron oxide, etc.) added to tailor properties.</skos:definition>
     </owl:Class>
     
 
@@ -16385,9 +16454,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">soda-lime glass</rdfs:label>
-        <rdfs:label>soda-lime glass</rdfs:label>
         <skos:definition xml:lang="en">Soda-Lime glass is a silicate glass that is formulated from silica, soda, and lime and is widely used in windows and containers.</skos:definition>
-        <skos:definition>Soda‑lime glass is a silicate glass that is composed of about 70% silica (SiO₂) with soda (Na₂O) acting as a flux and lime (CaO) acting as a stabilizer, and is widely used as common window and container glass.</skos:definition>
+        <skos:definition xml:lang="en">Soda‑lime glass is a silicate glass that is composed of about 70% silica (SiO₂) with soda (Na₂O) acting as a flux and lime (CaO) acting as a stabilizer, and is widely used as common window and container glass.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16437,9 +16505,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">borosilicate glass</rdfs:label>
-        <rdfs:label>borosilicate glass</rdfs:label>
         <skos:definition xml:lang="en">Borosilicate glass is a gilicate glass that is formulated with boron oxide to improve thermal resistance.</skos:definition>
-        <skos:definition>Borosilicate glass is a silicate glass that uses boron trioxide (B₂O₃) as a major additional glass‑forming constituent alongside silica, giving it characteristically low thermal expansion and high thermal/chemical resistance compared with soda‑lime glass.</skos:definition>
+        <skos:definition xml:lang="en">Borosilicate glass is a silicate glass that uses boron trioxide (B₂O₃) as a major additional glass‑forming constituent alongside silica, giving it characteristically low thermal expansion and high thermal/chemical resistance compared with soda‑lime glass.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16467,9 +16534,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">aluminosilicate glass</rdfs:label>
-        <rdfs:label>aluminosilicate glass</rdfs:label>
         <skos:definition xml:lang="en">Aluminosilicate glass is a form of silicate glass that is specifically formulated to resist high temperatures.</skos:definition>
-        <skos:definition>Aluminosilicate glass is a silicate glass in which SiO₂ and Al₂O₃ are key structural units, typically enabling higher transformation/softening temperatures and improved mechanical/chemical performance compared with many common silicates.</skos:definition>
+        <skos:definition xml:lang="en">Aluminosilicate glass is a silicate glass in which SiO₂ and Al₂O₃ are key structural units, typically enabling higher transformation/softening temperatures and improved mechanical/chemical performance compared with many common silicates.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16486,9 +16552,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">lead glass</rdfs:label>
-        <rdfs:label>lead glass</rdfs:label>
+        <skos:definition xml:lang="en">Lead glass is a silicate glass in which lead(II) oxide (PbO) is incorporated in significant amounts, increasing refractive index and modifying working properties relative to ordinary silicate glasses.</skos:definition>
         <skos:definition xml:lang="en">Lead glass is a silicate glass that is formulated with lead oxide to increase brilliance and refractive index.</skos:definition>
-        <skos:definition>Lead glass is a silicate glass in which lead(II) oxide (PbO) is incorporated in significant amounts, increasing refractive index and modifying working properties relative to ordinary silicate glasses.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16531,11 +16596,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050113">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
-        <rdfs:label xml:lang="en">non-silicate glasses</rdfs:label>
-        <rdfs:label>non-silicate glass</rdfs:label>
-        <skos:definition xml:lang="en">Non-Silicate glasses are glasses that are not primarily composed of silica.</skos:definition>
-        <skos:definition>Non‑silicate glasses are glasses whose primary glass‑forming network is not based on SiO₂, but instead on other glass formers or non‑oxide systems (e.g., phosphate (P₂O₅)-based, fluoride-based, or chalcogenide (S/Se/Te)-based compositions).</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <rdfs:label xml:lang="en">non-silicate glass</rdfs:label>
+        <skos:definition xml:lang="en">Non‑silicate glasses are glasses whose primary glass‑forming network is not based on SiO₂, but instead on other glass formers or non‑oxide systems (e.g., phosphate (P₂O₅)-based, fluoride-based, or chalcogenide (S/Se/Te)-based compositions).</skos:definition>
     </owl:Class>
     
 
@@ -16551,9 +16613,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">phosphate glass</rdfs:label>
-        <rdfs:label>phosphate glass</rdfs:label>
         <skos:definition xml:lang="en">Phosphate glass is a non-silicate glass that is composed mainly of phosphate compounds, offering distinct optical properties.</skos:definition>
-        <skos:definition>Phosphate glass is a non‑silicate glass based primarily on phosphorus pentoxide (P₂O₅) as the glass former (i.e., replacing SiO₂ as the network basis).</skos:definition>
+        <skos:definition xml:lang="en">Phosphate glass is a non‑silicate glass based primarily on phosphorus pentoxide (P₂O₅) as the glass former (i.e., replacing SiO₂ as the network basis).</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16570,9 +16631,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">borate glass</rdfs:label>
-        <rdfs:label>borate glass</rdfs:label>
         <skos:definition xml:lang="en">Borate glass is a non-silicate glass that is composed mainly of boron oxide and is known for its low melting point.</skos:definition>
-        <skos:definition>Borate glass is a non‑silicate glass based primarily on boron oxide (B₂O₃) as the glass‑forming network; it is distinct from borosilicate glass because B₂O₃ is the primary network former here rather than an added co‑former in a silica‑based network.</skos:definition>
+        <skos:definition xml:lang="en">Borate glass is a non‑silicate glass based primarily on boron oxide (B₂O₃) as the glass‑forming network; it is distinct from borosilicate glass because B₂O₃ is the primary network former here rather than an added co‑former in a silica‑based network.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16595,9 +16655,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050122"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050133"/>
         <rdfs:label xml:lang="en">optical glass</rdfs:label>
-        <rdfs:label>optical glass</rdfs:label>
+        <skos:definition xml:lang="en">Optical glass is a specialty glass manufactured for optical components (e.g., lenses, prisms, mirrors) with composition and processing chosen to achieve specified optical/mechanical parameters such as refractive index and dispersion.</skos:definition>
         <skos:definition xml:lang="en">Optical glass is functional glass that is formulated for high-precision light transmission and refractive performance.</skos:definition>
-        <skos:definition>Optical glass is a specialty glass manufactured for optical components (e.g., lenses, prisms, mirrors) with composition and processing chosen to achieve specified optical/mechanical parameters such as refractive index and dispersion.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16615,9 +16674,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">fused silica glass</rdfs:label>
-        <rdfs:label>fused silica glass</rdfs:label>
         <skos:definition xml:lang="en">Fused silica glass is an optical glass that is made from pure silica, prized for its high transparency and thermal stability.</skos:definition>
-        <skos:definition>Fused silica is a silicate glass that is essentially pure, amorphous SiO₂ (often called fused quartz or vitreous silica), obtained by melting silica and cooling fast enough to avoid crystallization.</skos:definition>
+        <skos:definition xml:lang="en">Fused silica is a silicate glass that is essentially pure, amorphous SiO₂ (often called fused quartz or vitreous silica), obtained by melting silica and cooling fast enough to avoid crystallization.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16649,11 +16707,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0050122">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
-        <rdfs:label xml:lang="en">specialty glasses</rdfs:label>
-        <rdfs:label>specialty glass</rdfs:label>
-        <skos:definition xml:lang="en">Specialty glasses are advanced glasses that are engineered for specific functional roles.</skos:definition>
-        <skos:definition>Specialty glasses are glasses engineered primarily for a targeted functional performance profile (e.g., optical functionality, magneto‑optical response, bioactivity, radiation shielding, or controlled crystallization), typically chosen to deliver a distinctive “property portfolio” for consumer and specialized markets.</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <rdfs:label xml:lang="en">specialty glass</rdfs:label>
+        <skos:definition xml:lang="en">Specialty glasses are glasses engineered primarily for a targeted functional performance profile (e.g., optical functionality, magneto‑optical response, bioactivity, radiation shielding, or controlled crystallization), typically chosen to deliver a distinctive “property portfolio” for consumer and specialized markets.</skos:definition>
     </owl:Class>
     
 
@@ -16825,9 +16880,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">magnetic glass</rdfs:label>
-        <rdfs:label>magnetic glass</rdfs:label>
+        <skos:definition xml:lang="en">Magnetic glass is a specialty glass that exhibits intrinsic bulk magnetic behavior (e.g., paramagnetism, ferri/ferromagnetism, superparamagnetism, or spin‑glass freezing) because its composition and/or microstructure contains a significant population of magnetic species - typically transition‑metal or rare‑earth ions and/or magnetic nanophases - so that magnetic susceptibility/permeability/magnetization is a designed functional property of the glass.</skos:definition>
         <skos:definition xml:lang="en">Magnetic glass is functional glass that is modified to exhibit magnetic properties.</skos:definition>
-        <skos:definition>Magnetic glass is a specialty glass that exhibits intrinsic bulk magnetic behavior (e.g., paramagnetism, ferri/ferromagnetism, superparamagnetism, or spin‑glass freezing) because its composition and/or microstructure contains a significant population of magnetic species - typically transition‑metal or rare‑earth ions and/or magnetic nanophases - so that magnetic susceptibility/permeability/magnetization is a designed functional property of the glass.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16892,9 +16946,8 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">chalcogenide glass</rdfs:label>
-        <rdfs:label>chalcogenide glass</rdfs:label>
         <skos:definition xml:lang="en">Chalcogenide glass is a nonlinear optical glass that is composed of chalcogen elements, offering infrared transmission and nonlinear optical behavior.</skos:definition>
-        <skos:definition>Chalcogenide glass is a non‑silicate glass (generally non‑oxide) that contains one or more chalcogens such as sulfur, selenium, or tellurium as key constituents and is valued particularly for infrared transparency.</skos:definition>
+        <skos:definition xml:lang="en">Chalcogenide glass is a non‑silicate glass (generally non‑oxide) that contains one or more chalcogens such as sulfur, selenium, or tellurium as key constituents and is valued particularly for infrared transparency.</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
@@ -16922,10 +16975,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">bioactive glass</rdfs:label>
-        <rdfs:label>bioactive glass</rdfs:label>
-        <skos:definition xml:lang="en">Bioactive glass is advanced glass that is designed to interact beneficially with biological tissues.</skos:definition>
-        <skos:definition>Bioactive glass is a specialty glass that forms a biologically compatible hydroxycarbonate apatite (HCA) layer on its surface in physiological conditions, enabling bonding with bone tissue.</skos:definition>
-        <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
+        <skos:definition xml:lang="en">Bioactive glass is a specialty glass that forms a biologically compatible hydroxycarbonate apatite (HCA) layer on its surface in physiological conditions, enabling bonding with bone tissue.</skos:definition>
     </owl:Class>
     
 
@@ -17141,6 +17191,46 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0081001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0081001">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050022"/>
+        <rdfs:label xml:lang="en">polyurethanes</rdfs:label>
+        <skos:definition xml:lang="en">Polyurethanes are a polymer family defined by urethane (carbamate) linkages, formed by reacting polyisocyanates with polyols; widely used in rigid/flexible foams, adhesives or coatings, offering high versatility in mechanical properties</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0081002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0081002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050022"/>
+        <rdfs:label xml:lang="en">unsaturated polyester resins</rdfs:label>
+        <skos:definition xml:lang="en">Unsaturated polyester resin is a thermosetting polymer system of unsaturated polyester prepolymers in reactive vinyl monomers; it cures by radical crosslinking into rigid networks used for fiber-reinforced composites</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0081003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0081003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050030"/>
+        <rdfs:label xml:lang="en">silicone rubber</rdfs:label>
+        <skos:definition xml:lang="en">Silicone rubber is a crosslinked polysiloxane (silicon-oxygen) elastomer family with organic side groups, available in multiple formulations and often filled; widely used for its broad service temperature range in medical devices, gaskets, and culinary tools</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0081004 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0081004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0050030"/>
+        <rdfs:label xml:lang="en">polychloropren</rdfs:label>
+        <skos:definition xml:lang="en">Polychloroprene, also Neoprene, is a family of synthetic elastomeric rubbers made by (typically emulsion) polymerization of chloroprene; available as solid rubber or latex, it offers good weathering and ozone resistance and is widely used in gaskets and wetsuits.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0090000 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0090000">
@@ -17164,9 +17254,7 @@ characterized by frequency, wavelength, and speed</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">semiconductor</rdfs:label>
-        <rdfs:label>semiconductor</rdfs:label>
         <skos:definition xml:lang="en">A semiconductor is an engineered material representing a class of materials characterized by an electrical conductivity between that of a conductor and an insulator. This is a result of a range of inexistent energy states in ther electron configuration between the valence and conduction band (bandgap).</skos:definition>
-        <skos:definition>band gap &gt;xx eV</skos:definition>
         <pmd:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pmd:PMD_0000060>
     </owl:Class>
     
